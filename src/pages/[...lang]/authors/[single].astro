@@ -1,0 +1,95 @@
+---
+import BlogCard from "@/components/BlogCard.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import Social from "@/components/Social.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { supportedLang } from "@/lib/utils/languageParser";
+import { markdownify, slugify } from "@/lib/utils/textConverter";
+import PageHeader from "@/partials/PageHeader.astro";
+import type { ContentEntryMap } from "astro:content";
+
+// get all static paths for authors
+export async function getStaticPaths() {
+  const COLLECTION_FOLDER = "authors";
+
+  const paths = await Promise.all(
+    supportedLang.map(async (lang) => {
+      const authors = await getSinglePage(
+        COLLECTION_FOLDER,
+        lang as keyof ContentEntryMap
+      );
+
+      return authors.map((author) => ({
+        params: {
+          lang: lang || undefined,
+          single: author.slug.split("/").pop(),
+        },
+        props: {
+          author,
+          lang,
+        },
+      }));
+    })
+  );
+  return paths.flat();
+}
+
+const { author, lang } = Astro.props;
+const { title, social, meta_title, description, image, designation } =
+  author.data;
+const { Content } = await author.render();
+
+// get all posts by author
+const BLOG_FOLDER = "blog";
+const posts = await getSinglePage(BLOG_FOLDER, lang as keyof ContentEntryMap);
+const postFilterByAuthor = posts.filter(
+  (post) => slugify(post.data.author) === slugify(title)
+);
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <PageHeader title={title} />
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center border-b border-border pb-14">
+        <div class="text-center lg:col-4">
+          {
+            image && (
+              <ImageMod
+                src={image}
+                class="mx-auto mb-10"
+                height={200}
+                width={200}
+                alt={title}
+                format="webp"
+              />
+            )
+          }
+          <span class="section-title-border border-center"></span>
+          <h1 class="h3 mb-2" set:html={markdownify(title)} />
+          <p class="mb-6" set:html={markdownify(designation ?? "")} />
+          <div class="content">
+            <Content />
+          </div>
+          <Social source={social} className="social-icon-team" />
+        </div>
+      </div>
+
+      <div class="row justify-center pb-16 pt-14">
+        {
+          postFilterByAuthor.map((post) => (
+            <div class="mb-12 md:col-6 lg:col-4">
+              <BlogCard data={post} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,152 @@
+---
+import Logo from "@/components/Logo.astro";
+import Social from "@/components/Social.astro";
+import config from "@/config/config.json";
+import social from "@/config/social.json";
+import {
+  getLangFromUrl,
+  getTranslations,
+  slugSelector,
+} from "@/lib/utils/languageParser";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { ContentEntryMap } from "astro:content";
+
+const lang = getLangFromUrl(Astro.url);
+const menu = await getTranslations(lang as keyof ContentEntryMap);
+let footer: string[] = [];
+if (menu) {
+  footer = menu.footer;
+}
+
+const { copyright, address, phone, email, footer_content, copyright_menu } =
+  config.params;
+const { services, contact_info, follow_us_on, subscribe_newsletter } =
+  await getTranslations(lang as keyof ContentEntryMap);
+---
+
+<footer>
+  <!-- main footer -->
+  <div class="section bg-secondary">
+    <div class="container">
+      <div class="row justify-between">
+        <!-- footer content -->
+        <div class="md:col-5 mb-5 md:mb-0">
+          <Logo src="/images/logo-alt.png" />
+          <p
+            class="text-light/75 mt-6 mb-5"
+            set:html={markdownify(footer_content)}
+          />
+          <!-- social links -->
+          <h4 class="text-white mb-6 mt-12 h5 font-semibold">{follow_us_on}</h4>
+          <Social source={social.main} className="social-icon-alt" />
+        </div>
+
+        <div class="md:col-6">
+          <div class="row">
+            <!-- service list -->
+            <div class="col-6 mt-5">
+              <h4 class="text-white mb-4 h5 font-semibold">{services}</h4>
+              <ul class="list-styled">
+                {
+                  footer.map((menu: any) => (
+                    <li class="mb-3 text-light/75">
+                      <a
+                        class=" block"
+                        href={`${slugSelector(menu.url, lang)}`}
+                        set:html={markdownify(menu.name)}
+                      />
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+
+            <!-- contact info -->
+            <div class="col-6 mt-5">
+              <h4 class="text-white mb-4 h5 font-semibold">{contact_info}</h4>
+              <ul>
+                <li class="text-light/75 mb-3">
+                  <a
+                    target="_blank"
+                    href={`https://www.google.com/maps?q=${encodeURIComponent(address)}`}
+                    set:html={markdownify(address)}
+                  />
+                </li>
+                <li class="text-light/75 mb-3">
+                  <a href={`tel:${phone}`} set:html={markdownify(phone)} />
+                </li>
+                <li class="text-light/75 mb-3">
+                  <a href={`mailto:${email}`} set:html={markdownify(email)} />
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- newsletter -->
+          <div class="col-12">
+            <h4 class="text-white mb-6 mt-12 h5 font-semibold">
+              {subscribe_newsletter}
+            </h4>
+            <form action="#">
+              <div class="relative w-full">
+                <input
+                  type="email"
+                  class="form-control newsletter-form w-full"
+                  id="newsletter"
+                  name="newsletter"
+                  placeholder="Enter your email"
+                />
+                <button type="submit" class="btn btn-primary btn-subscribe">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- copyright -->
+  <div class="bg-[#1F2630] py-4">
+    <div class="container">
+      <div class="row">
+        <div class="md:col-6 text-center md:text-start mb-3 md:mb-0">
+          <p class="mb-0 text-light text-sm" set:html={markdownify(copyright)}>
+            <span class="text-primary" set:html={config.site.logo_text} />
+            <span id="currentYear" class="mr-1"></span>
+            <script>
+              // astro:page-load event is fired when the page is loaded
+              document.addEventListener("astro:page-load", () => {
+                let CurrentYear = new Date().getFullYear();
+                document.querySelector("#currentYear")!.innerHTML =
+                  CurrentYear.toString();
+              });
+            </script>
+          </p>
+        </div>
+
+        {
+          copyright_menu.enable && (
+            <div class="md:col-6 text-center md:text-end text-sm">
+              <ul class="list-inline">
+                {copyright_menu?.menu_items?.map(
+                  (menu: { name: string; url: string }, i: number) => (
+                    <li class="inline mx-0">
+                      <a
+                        class={`inline-block px-3 text-light hover:text-primary duration-200 ${copyright_menu?.menu_items.length - 1 !== i ? "border-r" : ""}`}
+                        href={menu.url}
+                      >
+                        {menu.name}
+                      </a>
+                    </li>
+                  ),
+                )}
+              </ul>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,41 @@
+---
+import { getLangFromUrl, slugSelector } from "@/lib/utils/languageParser";
+import { markdownify } from "@/lib/utils/textConverter";
+import ImageMod from "./ImageMod.astro";
+import Social from "./Social.astro";
+const lang = getLangFromUrl(Astro.url);
+
+const { info } = Astro.props;
+---
+
+<div class="lg:col-4 sm:col-6 mb-8">
+  <div class="team-member text-center">
+    <div class="team-member-img relative mb-12">
+      <ImageMod
+        width={400}
+        height={500}
+        class="w-full"
+        src={info?.data.image}
+        alt={info?.data.title}
+      />
+      <div class="hover-icon py-4">
+        <Social
+          source={info.data.social}
+          className="social-icon flex justify-center items-center gap-x-4"
+        />
+      </div>
+    </div>
+    <h5 class="mb-2 relative inline-block">
+      <a
+        href={slugSelector(`/${info.slug}`, lang)}
+        class="text-dark hover:text-primary duration-200 stretched-link"
+        set:html={markdownify(info.data.title)}
+      />
+    </h5>
+    {
+      info.data.designation && (
+        <p set:html={markdownify(info.data.designation)} />
+      )
+    }
+  </div>
+</div>

@@ -1,0 +1,60 @@
+{
+  "site": {
+    "title": "Bexer-Astro",
+    "base_url": "https://bexer-astro.onrender.com",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "150",
+    "logo_height": "42",
+    "logo_text": "Bexer"
+  },
+
+  "settings": {
+    "search": true,
+    "sticky_header": true,
+    "theme_switcher": true,
+    "default_theme": "system",
+    "pagination": 4,
+    "blog_folder": "blog",
+    "default_language": "en",
+    "disable_languages": [],
+    "default_language_in_subdir": false,
+    "top_header": true
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "address": "123 Main Street, New York, NY 10001",
+    "phone": "123-456-7890",
+    "email": "info@bexar.com",
+    "footer_content": "Lorem ipsum dolor amet consectetur adipisicing elit sed eiusm tempor incididunt ut labore dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamaboris nisi ut aliquip.exea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    "copyright": "&copy; Designed And Developed by [Themefisher](https://themefisher.com/)",
+    "copyright_menu": {
+      "enable": true,
+      "menu_items": [
+        { "name": "Privacy Policy", "url": "/privacy-policy" },
+        { "name": "Terms of Service", "url": "/terms" }
+      ]
+    }
+  },
+
+  "navigation_button": {
+    "enable": true,
+    "label": "Get A Quote",
+    "link": "/contact"
+  },
+
+  "disqus": {
+    "enable": true,
+    "shortname": "themefisher-template",
+    "settings": {}
+  },
+
+  "metadata": {
+    "meta_author": "themefisher",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Bexer is a SAAS theme powered by Astro"
+  }
+}

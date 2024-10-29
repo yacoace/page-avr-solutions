@@ -1,0 +1,258 @@
+---
+import Logo from "@/components/Logo.astro";
+import Social from "@/components/Social.astro";
+import config from "@/config/config.json";
+import social from "@/config/social.json";
+import LanguageSwitcher from "@/helpers/LanguageSwitcher";
+import {
+  getLangFromUrl,
+  getTranslations,
+  slugSelector,
+} from "@/lib/utils/languageParser";
+import type { ContentEntryMap } from "astro:content";
+import { IoSearch } from "react-icons/io5";
+
+let lang = getLangFromUrl(Astro.url);
+const menu = await getTranslations(lang as keyof ContentEntryMap);
+
+const { navigation_button, settings } = config;
+const { default_language, top_header } = config.settings;
+const { email, phone } = config.params;
+const { pathname } = Astro.url;
+const { get_quote, connect_with_us, call_now } = await getTranslations(
+  lang as keyof ContentEntryMap,
+);
+
+const disabledLanguages = config.settings.disable_languages as string[];
+if (disabledLanguages.includes(lang)) {
+  lang = default_language;
+}
+---
+
+{
+  top_header && (
+    <div class="bg-secondary pt-4 pb-2">
+      <div class="container">
+        <div class="row items-center gy-2">
+          {/* social icons  */}
+          <div class="md:col-6 text-center md:text-left">
+            <div class="flex items-center justify-center md:justify-start">
+              <span class="text-white/80 text-sm mr-4 leading-6">
+                {connect_with_us}:
+              </span>
+              <Social
+                source={social.main}
+                className="social-icons-topbar inline-block text-sm"
+              />
+            </div>
+          </div>
+          {/* mail and phone  */}
+          <div class="md:col-6 text-center md:text-right">
+            <ul class="flex justify-center md:justify-end">
+              <li class="mx-0 border-r border-border/50">
+                <a
+                  class="text-white/80 hover:text-primary/80 inline-block text-sm lg:px-3 px-2 py-1 md:py-0 duration-200 leading-6"
+                  href={`mailto:${email}`}
+                >
+                  {email}
+                </a>
+              </li>
+              <li class="mx-0">
+                <a
+                  class="text-white/80 hover:text-primary/80 inline-block lg:px-3 px-2 py-1 md:py-0 text-sm duration-200 leading-6"
+                  href={`tel:${phone}`}
+                >
+                  {call_now}: <span class="text-primary">{phone}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+<header class={`header z-30 ${settings.sticky_header && "sticky top-0"}`}>
+  <nav class="navbar container">
+    {/* logo */}
+    <div class="order-0">
+      <Logo />
+    </div>
+    {/* navbar toggler */}
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark lg:order-1"
+    >
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Menu Open</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Menu Close</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    {/* /navbar toggler */}
+
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-4"
+    >
+      {
+        menu?.main.map(
+          (menu: {
+            name: string;
+            url: string;
+            hasChildren: boolean;
+            children: { name: string; url: string }[];
+          }) => (
+            <>
+              {menu.hasChildren ? (
+                <li class="nav-link nav-dropdown group relative">
+                  <span
+                    class={`items-center ${
+                      menu.children
+                        ?.map(({ url }: { url: string }) =>
+                          slugSelector(url, lang),
+                        )
+                        .includes(pathname)
+                        ? "active"
+                        : ""
+                    }`}
+                  >
+                    {menu.name}
+                    <svg
+                      class="h-4 w-4 fill-current inline-block"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </span>
+                  <ul class="nav-dropdown-list hidden group-hover:block lg:invisible lg:absolute lg:block lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
+                    {menu.children?.map(
+                      (child: { name: string; url: string }) => (
+                        <li class="nav-dropdown-item">
+                          <a
+                            href={slugSelector(child.url, lang)}
+                            aria-label={child.name}
+                            class={`nav-dropdown-link block ${
+                              pathname === slugSelector(child.url, lang) &&
+                              "active"
+                            }`}
+                          >
+                            {child.name}
+                          </a>
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </li>
+              ) : (
+                <li class="nav-item">
+                  <a
+                    href={slugSelector(menu.url, lang)}
+                    class={`nav-link block ${
+                      pathname === slugSelector(menu.url, lang) && "active"
+                    }`}
+                  >
+                    {menu.name}
+                  </a>
+                </li>
+              )}
+            </>
+          ),
+        )
+      }
+      {/* Navigation button */}
+      {
+        navigation_button.enable && (
+          <li class="mt-4 inline-block lg:hidden">
+            <a
+              class="btn btn-primary hover-ripple"
+              href={navigation_button.link}
+            >
+              {get_quote}
+            </a>
+          </li>
+        )
+      }
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+      {/* Search button */}
+      {
+        settings.search && (
+          <button
+            class="border-border text-dark hover:text-primary  mr-5 inline-block border-r pr-5 text-xl  "
+            aria-label="search"
+            data-search-trigger
+          >
+            <IoSearch />
+          </button>
+        )
+      }
+
+      <LanguageSwitcher client:load lang={lang} pathname={pathname} />
+
+      {/* Navigation button */}
+      {
+        navigation_button.enable && (
+          <a
+            class="btn btn-primary hover:glow-shadow hidden lg:inline-block"
+            href={slugSelector(navigation_button.link, lang)}
+          >
+            {get_quote}
+          </a>
+        )
+      }
+    </div>
+  </nav>
+</header>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    // Navbar Toggler
+    const navbarToggler = document.querySelector(
+      ".navbar-toggler",
+    ) as HTMLElement | null;
+    const navbarMenu = document.querySelector(
+      ".navbar-nav",
+    ) as HTMLElement | null;
+
+    navbarToggler?.addEventListener("click", () => {
+      navbarToggler.classList.toggle("active");
+      if (navbarMenu) {
+        navbarMenu.classList.toggle("active");
+      }
+    });
+
+    // Header Sticky Mobile
+    const header = document.querySelector(".header") as HTMLElement | null;
+
+    window.addEventListener("scroll", () => {
+      if (header) {
+        if (window.scrollY > 0) {
+          header.classList.add("header-fixed-top");
+        } else {
+          header.classList.remove("header-fixed-top");
+        }
+      }
+    });
+  });
+
+  // Dropdown Menu Toggler For Mobile
+  const dropdownMenuToggler = document.querySelectorAll(
+    ".nav-dropdown > .nav-link",
+  ) as NodeListOf<HTMLElement>;
+
+  dropdownMenuToggler.forEach((toggler) => {
+    toggler?.addEventListener("click", (e: Event) => {
+      const target = e.target as HTMLElement;
+      target.parentElement?.classList.toggle("active");
+    });
+  });
+</script>

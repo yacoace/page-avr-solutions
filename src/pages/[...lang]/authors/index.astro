@@ -1,0 +1,54 @@
+---
+import PersonCard from "@/components/PersonCard.astro";
+import Base from "@/layouts/Base.astro";
+import { getListPage, getSinglePage } from "@/lib/contentParser.astro";
+import { getLangFromUrl, supportedLang } from "@/lib/utils/languageParser";
+import PageHeader from "@/partials/PageHeader.astro";
+import { type ContentEntryMap } from "astro:content";
+
+const COLLECTION_FOLDER = "authors";
+
+const lang = getLangFromUrl(Astro.url);
+
+export function getStaticPaths() {
+  const paths = supportedLang.map((lang) => ({
+    params: { lang: lang || undefined },
+  }));
+  return paths;
+}
+
+// const { lang } = Astro.params;
+const authorIndex = await getListPage(
+  COLLECTION_FOLDER,
+  lang as keyof ContentEntryMap
+);
+const authors = await getSinglePage(
+  COLLECTION_FOLDER,
+  lang as keyof ContentEntryMap
+);
+
+type Author = {
+  slug: string;
+};
+---
+
+<Base title={authorIndex[0].data.title}>
+  <PageHeader title={authorIndex[0].data.title} />
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="row g-4">
+          {
+            authors.map((author: Author) => {
+              const slugParts = author.slug.split("/");
+              slugParts[0] = COLLECTION_FOLDER;
+              const modifiedSlug = slugParts.join("/");
+              author.slug = modifiedSlug;
+              return <PersonCard info={author} />;
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

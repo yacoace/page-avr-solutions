@@ -1,0 +1,75 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getListPage, getSinglePage } from "@/lib/contentParser.astro";
+import { supportedLang } from "@/lib/utils/languageParser";
+import CallToActionLG from "@/partials/CallToActionLG.astro";
+import Testimonial from "@/partials/Testimonial.astro";
+import AboutUs from "@/partials/homepage/AboutUs.astro";
+import BannerFeature from "@/partials/homepage/BannerFeature.astro";
+import CaseStudy from "@/partials/homepage/CaseStudy.astro";
+import Feature from "@/partials/homepage/Feature.astro";
+import FunFacts from "@/partials/homepage/FunFacts.astro";
+import HeroSlider from "@/partials/homepage/HeroSlider.astro";
+import LatestNews from "@/partials/homepage/LatestNews.astro";
+import ServiceSection from "@/partials/homepage/ServiceSection.astro";
+import Team from "@/partials/homepage/Team.astro";
+import type { ContentEntryMap } from "astro:content";
+
+export function getStaticPaths() {
+  const paths = supportedLang.map((lang) => ({
+    params: { lang: lang || undefined },
+  }));
+  return paths;
+}
+
+const { lang } = Astro.params;
+const BLOG_FOLDER = "blog";
+const homepage = await getListPage("homepage", lang as keyof ContentEntryMap);
+const { hero_slider, banner_feature, funfacts, feature, latest_news } =
+  homepage[0].data;
+
+const aboutIndex = await getListPage("about", lang as keyof ContentEntryMap);
+const serviceIndex = await getListPage(
+  "services",
+  lang as keyof ContentEntryMap,
+);
+const services = await getSinglePage("services", lang as keyof ContentEntryMap);
+const teamIndex = await getListPage("team", lang as keyof ContentEntryMap);
+const team = await getSinglePage("team", lang as keyof ContentEntryMap);
+const projectIndex = await getListPage(
+  "projects",
+  lang as keyof ContentEntryMap,
+);
+const projects = await getSinglePage("projects", lang as keyof ContentEntryMap);
+const posts = await getSinglePage(BLOG_FOLDER, lang as keyof ContentEntryMap);
+
+const testimonial = await getSinglePage(
+  "sections",
+  lang as keyof ContentEntryMap,
+  "testimonial",
+);
+
+const callToAction = await getSinglePage(
+  "sections",
+  lang as keyof ContentEntryMap,
+  "call-to-action",
+);
+---
+
+<Base>
+  <HeroSlider heroSlider={hero_slider} />
+  <BannerFeature bannerFeature={banner_feature} />
+  <AboutUs about={aboutIndex[0].data.about_section} />
+  <FunFacts funfacts={funfacts} />
+  <Feature feature={feature} />
+  <ServiceSection serviceIndex={serviceIndex[0]} services={services} />
+  <Team
+    teamIndex={teamIndex[0]}
+    team={team.slice(0, 3)}
+    className="pt-0 bg-gray-white"
+  />
+  <CaseStudy projectIndex={projectIndex[0]} projects={projects} />
+  <Testimonial testimonial={testimonial[0].data} />
+  <CallToActionLG callToAction={callToAction[0].data} />
+  <LatestNews posts={posts} latest_news={latest_news} />
+</Base>

@@ -1,0 +1,41 @@
+---
+import Counter from "@/helpers/Counter";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+
+const { funfacts } = Astro.props;
+---
+
+<section class="funfacts">
+  <div class="container overflow-hidden">
+    <div class="row bg-secondary px-5 py-10 justify-center items-center">
+      {
+        funfacts?.funfacts_item?.map(
+          (fact: { icon: string; name: string; count: number }) => (
+            <div class="lg:col-3 sm:col-6 mb-6 lg:mb-0">
+              <div class="flex items-center">
+                <DynamicIcon
+                  icon={fact.icon}
+                  className="icon-lg me-3 text-primary"
+                />
+                <div>
+                  <h3 class="h1 text-white mb-0">
+                    <h3 class="h1 text-white mb-0">
+                      <Counter
+                        client:load
+                        count={fact.count}
+                        duration={2}
+                        suffix="+"
+                      />
+                    </h3>
+                  </h3>
+                  <span class="text-white" set:html={markdownify(fact.name)} />
+                </div>
+              </div>
+            </div>
+          )
+        )
+      }
+    </div>
+  </div>
+</section>

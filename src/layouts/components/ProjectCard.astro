@@ -1,0 +1,178 @@
+---
+import { getLangFromUrl, slugSelector } from "@/lib/utils/languageParser";
+import { markdownify } from "@/lib/utils/textConverter";
+import ImageMod from "./ImageMod.astro";
+const { projects } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const { pathname } = Astro.url;
+
+const groups = [
+  ...new Set(
+    projects.map((project: { data: { category: string } }) =>
+      project.data.category.toLocaleLowerCase(),
+    ),
+  ),
+];
+---
+
+<div>
+  <ul
+    class={`flex justify-center items-center flex-wrap mb-7 ${pathname === `/${lang}` || pathname === "/" ? "hidden" : "shuffle-filter"}`}
+  >
+    <li class="selected" data-target="all">
+      <button
+        type="button"
+        class={`m-3 inline-block text-dark py-3 font-secondary uppercase font-medium text-lg`}
+      >
+        All
+      </button>
+    </li>
+    {
+      groups.map((group) => (
+        <li data-target={group}>
+          <button
+            type="button"
+            class={`m-3 inline-block text-dark py-3 font-secondary uppercase font-medium text-lg`}
+          >
+            {group}
+          </button>
+        </li>
+      ))
+    }
+  </ul>
+
+  <ul
+    class={`row shuffle-container ${pathname === `/${lang}` || pathname === "/" ? "g-1" : "g-4"}`}
+  >
+    {
+      projects.map((project: any) => {
+        const slugParts = project.slug.split("/");
+        slugParts[0] = "projects";
+        const modifiedSlug = slugParts.join("/");
+        project.slug = modifiedSlug;
+        return (
+          <li
+            class="lg:col-3 sm:col-6"
+            data-groups={`["${project?.data?.category.toLocaleLowerCase()}","all"]`}
+          >
+            <div class="project-item mb-10">
+              <div class="relative mb-4 overflow-hidden">
+                <ImageMod
+                  src={project.data.image}
+                  alt="project thumb"
+                  class="w-full object-cover"
+                  width={473}
+                  height={473}
+                  format="webp"
+                />
+                <div class="hover-overlay">
+                  <a href={project.data.image} class="venobox">
+                    <i class="uni-plus" />
+                  </a>
+                </div>
+              </div>
+              {/* project-info  */}
+              <div class="ms-4">
+                <h6
+                  class="text-primary text-base mb-2"
+                  set:html={markdownify(project.data.category)}
+                />
+                <h5 class="text-dark hover:text-primary duration-200">
+                  <a
+                    href={slugSelector(`${project.slug}`, lang)}
+                    set:html={markdownify(project.data.title)}
+                  />
+                </h5>
+              </div>
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
+
+  <!-- Modal Structure -->
+  <div
+    id="image-modal"
+    class="hidden fixed inset-0 z-50 bg-black bg-opacity-75 flex items-center justify-center"
+  >
+    <div class="rounded-lg">
+      <button
+        id="close-modal"
+        class="absolute top-0 right-0 text-white bg-black py-2 px-4"
+      >
+        X
+      </button>
+      <img
+        id="modal-image"
+        src=""
+        alt="project thumb"
+        class="max-w-[600px] object-cover"
+      />
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const modal = document.getElementById("image-modal") as HTMLElement;
+    const modalImage = document.getElementById(
+      "modal-image",
+    ) as HTMLImageElement;
+    const closeModal = document.getElementById("close-modal") as HTMLElement;
+
+    document.querySelectorAll(".venobox").forEach((venobox) => {
+      venobox.addEventListener("click", (event) => {
+        event.preventDefault();
+        const imageSrc = (venobox as HTMLAnchorElement).getAttribute("href")!;
+        modalImage.setAttribute("src", imageSrc);
+        modal.classList.remove("hidden");
+      });
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        modal.classList.add("hidden");
+      }
+    });
+  });
+</script>
+
+<script>
+  import Shuffle from "shufflejs";
+
+  document.addEventListener("astro:page-load", () => {
+    let element = document.querySelector(".shuffle-container") as HTMLElement;
+
+    let shuffleInstance = new Shuffle(element, {
+      itemSelector: "li",
+    });
+
+    // Apply the default filter to show all items
+    shuffleInstance.filter("all");
+
+    const filter = document.querySelector(".shuffle-filter");
+    const filtterLists = Array.from(filter?.children || []);
+    filtterLists.forEach((list) => {
+      const button = list.querySelector("button");
+      if (list.classList.contains("selected")) {
+        button?.classList.add("text-primary");
+      }
+      button?.addEventListener("click", function () {
+        filtterLists.forEach((list) => {
+          list.classList.remove("selected");
+          list.querySelector("button")?.classList.remove("text-primary");
+        });
+        this.parentElement?.classList.add("selected");
+        this.classList.add("text-primary");
+        const keyword = list.getAttribute("data-target");
+        shuffleInstance.filter(keyword!);
+      });
+    });
+  });
+</script>

@@ -1,0 +1,62 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import ImageMod from "@/components/ImageMod.astro";
+
+const { feature } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="row items-center justify-center">
+      <div class="lg:col-6 lg:order-1 order-2">
+        <span class="section-title-border"></span>
+        <p class="h5" set:html={markdownify(feature.subtitle)} />
+        <h2
+          class="h1 mb-10 mt-4 text-balance"
+          set:html={markdownify(feature.title)}
+        />
+        <p class="mb-5 text-balance" set:html={markdownify(feature.content)} />
+
+        <!-- feature item -->
+        <ul class="list-none">
+          {
+            feature?.feature_item.map(
+              (item: { name: string; content: string; icon: string }) => (
+                <li class="flex items-center mb-8 last:mb-0">
+                  <div class="text-center mr-8">
+                    <div class="icon-bg water-wave flex items-center justify-center">
+                      <DynamicIcon
+                        icon={item.icon}
+                        className="icon text-primary"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="h5 mb-2" set:html={markdownify(item.name)} />
+                    <p
+                      set:html={markdownify(item.content)}
+                      class="text-balance"
+                    />
+                  </div>
+                </li>
+              )
+            )
+          }
+        </ul>
+      </div>
+      <div class="lg:col-6 lg:pe-0 lg:order-2 order-1 mb-10 lg:mb-0">
+        <div class="feature-img-bg box-shadow">
+          <ImageMod
+            width={1000}
+            height={1000}
+            class="w-full"
+            src={feature.image}
+            alt="feature-image"
+            format="webp"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

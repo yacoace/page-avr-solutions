@@ -1,0 +1,63 @@
+---
+import dateFormat from "@/lib/utils/dateFormat";
+import {
+  getLangFromUrl,
+  getTranslations,
+  slugSelector,
+} from "@/lib/utils/languageParser";
+import {
+  humanize,
+  markdownify,
+  plainify,
+  slugify,
+} from "@/lib/utils/textConverter";
+import type { ContentEntryMap } from "astro:content";
+import ImageMod from "./ImageMod.astro";
+
+const { data } = Astro.props;
+const { title, image, date, author, categories } = data.data;
+
+const lang = getLangFromUrl(Astro.url);
+
+const slugParts = data.slug.split("/");
+slugParts[0] = "blog";
+const modifiedSlug = slugParts.join("/");
+data.slug = modifiedSlug;
+
+const { by, on } = await getTranslations(lang as keyof ContentEntryMap);
+---
+
+<div class="lg:mb-0 mb-4 relative z-10">
+  <article class="card">
+    <div class="card-type" set:html={markdownify(categories[0])} />
+    <ImageMod
+      class="w-full aspect-[445/350] object-cover"
+      src={image}
+      width={445}
+      height={350}
+      alt="blog-thumb"
+    />
+    <div class="card-body">
+      <div class="card-meta">
+        {by}
+        <strong>
+          <a
+            href={slugSelector(`/authors/${slugify(author)}`, lang)}
+            set:html={humanize(author)}
+          />/ {on}
+          <strong>{dateFormat(date)}</strong>
+        </strong>
+        <h4 class="card-title">
+          <a
+            href={slugSelector(`/${data.slug}`, lang)}
+            set:html={markdownify(title)}
+          />
+        </h4>
+        <span class="section-title-border"></span>
+        <p class="card-text">
+          {plainify(data.body)}
+        </p>
+      </div>
+    </div>
+  </article>
+</div>

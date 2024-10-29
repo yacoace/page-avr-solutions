@@ -1,0 +1,37 @@
+---
+import ProjectCard from "@/components/ProjectCard.astro";
+import { getLangFromUrl, slugSelector } from "@/lib/utils/languageParser";
+import { markdownify } from "@/lib/utils/textConverter";
+
+const { projects, projectIndex } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+---
+
+<section class="section pt-0">
+  <div class="pb-4 bg-gray-white">
+    <div class="container">
+      <div class="flex justify-between items-center">
+        <div class="section-title mb-0">
+          <span class="section-title-border"></span>
+          <p set:html={markdownify(projectIndex?.data?.subtitle)} />
+          <h2 class="!ml-0" set:html={markdownify(projectIndex?.data?.title)} />
+        </div>
+
+        {
+          projectIndex?.data.button.enable && (
+            <div class="hidden md:block !mr-0">
+              <a
+                href={slugSelector(projectIndex?.data.button.link, lang)}
+                class="btn btn-primary hover-ripple"
+              >
+                {projectIndex?.data.button.label}
+              </a>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+
+  <ProjectCard projectIndex={projectIndex[0]} projects={projects.slice(0, 4)} />
+</section>

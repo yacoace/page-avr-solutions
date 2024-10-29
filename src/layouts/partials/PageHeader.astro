@@ -1,0 +1,22 @@
+---
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import { humanize } from "@/lib/utils/textConverter";
+
+const { title = "" }: { title?: string } = Astro.props;
+---
+
+<section
+  class="bg-cover bg-center bg-no-repeat overlay"
+  style={`background-image: url(${"/images/backgrounds/page-title.jpg"});`}
+>
+  <div
+    class="absolute inset-0 bg-gradient-to-l from-[#00000040] to-[#00000050] z-10 h-full w-full"
+  >
+  </div>
+  <div class="container text-left relative z-20">
+    <div class="px-8 section">
+      <h1 class="text-white" set:text={humanize(title)} />
+      <Breadcrumbs className="mt-6" />
+    </div>
+  </div>
+</section>

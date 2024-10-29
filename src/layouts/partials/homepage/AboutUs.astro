@@ -1,0 +1,54 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import { getLangFromUrl, slugSelector } from "@/lib/utils/languageParser";
+import { markdownify } from "@/lib/utils/textConverter";
+
+const { about } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+---
+
+{
+  about?.enable && (
+    <>
+      <section class="section">
+        <div class="container">
+          <div class="row justify-between items-center">
+            <div
+              class="md:col-5 bg-contain bg-no-repeat"
+              style={{
+                backgroundImage: `url(${about.bg_image})`,
+              }}
+            >
+              {/* about us image  */}
+              <ImageMod
+                class="w-100 max-md:pb-20"
+                src={about.image}
+                alt="About Image"
+                format="webp"
+                width={518}
+                height={492}
+              />
+            </div>
+            <div class="md:col-6">
+              <span class="section-title-border" />
+              <p class="h5" set:html={markdownify(about.subtitle)} />
+              <h2
+                class="h1 mb-10 mt-4 text-balance"
+                set:html={markdownify(about.title)}
+              />
+              <p class="mb-5" set:html={markdownify(about.content)} />
+              {about.button.enable && (
+                <a
+                  class="btn btn-primary"
+                  href={slugSelector(about.button.link, lang)}
+                >
+                  <span>{about.button.label}</span>
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

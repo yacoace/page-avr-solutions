@@ -1,0 +1,41 @@
+---
+import BlogCard from "@/components/BlogCard.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+const { latest_news, posts } = Astro.props;
+---
+
+{
+  latest_news.enable && (
+    <section class="section bg-gray-white relative isolate">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <span class="section-title-border" />
+              <p set:html={markdownify(latest_news.sub_title)} />
+              <h2 set:html={markdownify(latest_news.title)} class="!ml-0" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          {posts?.slice(0, 3).map((post: { data: { title: string } }) => (
+            <div class="lg:col-4">
+              <BlogCard data={post} />
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* background shapes */}
+      <img
+        class="blog-shape-left"
+        src="/images/backgrounds/blog-bg-left.png"
+        alt=""
+      />
+      <img
+        class="blog-shape-right"
+        src="/images/backgrounds/blog-bg-right.png"
+        alt=""
+      />
+    </section>
+  )
+}

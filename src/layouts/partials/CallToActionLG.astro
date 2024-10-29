@@ -1,0 +1,31 @@
+---
+import { getLangFromUrl, slugSelector } from "@/lib/utils/languageParser";
+import { markdownify } from "@/lib/utils/textConverter";
+
+const { callToAction } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+---
+
+<section
+  class="section overlay-secondary bg-fixed bg-[url('/images/backgrounds/cta-lg.jpg')]"
+>
+  <div class="container">
+    <div class="row">
+      <div class="lg:col-7 md:col-10 col-11 text-center mx-auto">
+        <h2
+          class="h1 text-white relative mb-12"
+          set:html={markdownify(callToAction.title)}
+        />
+        {
+          callToAction.button.enable && (
+            <a
+              href={slugSelector(callToAction.button.link, lang)}
+              class="btn btn-primary hover-ripple"
+              set:html={callToAction.button.label}
+            />
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>

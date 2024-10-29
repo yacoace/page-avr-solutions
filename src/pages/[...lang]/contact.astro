@@ -1,0 +1,159 @@
+---
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import { getListPage } from "@/lib/contentParser.astro";
+import { getTranslations, supportedLang } from "@/lib/utils/languageParser";
+import PageHeader from "@/partials/PageHeader.astro";
+import { type ContentEntryMap } from "astro:content";
+import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa6";
+
+export function getStaticPaths() {
+  const paths = supportedLang.map((lang) => ({
+    params: { lang: lang || undefined },
+  }));
+  return paths;
+}
+
+const { lang } = Astro.params;
+const contact = await getListPage("contact", lang as keyof ContentEntryMap);
+
+const { contact_form_action, address, phone, email } = config.params;
+const { title, description, meta_title, image } = contact[0].data;
+
+const {
+  our_address,
+  phone_number,
+  message_us,
+  contact_form,
+  send_message,
+  placeholder_name,
+  placeholder_email,
+  placeholder_subject,
+  placeholder_message,
+  placeholder_phone,
+} = await getTranslations(lang as keyof ContentEntryMap);
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <PageHeader title={title} />
+
+  <!-- contact items -->
+  <section class="section pb-0">
+    <div class="container">
+      <div class="row justify-center g-5">
+        <!-- Addresses -->
+        <div class="col-10 sm:col-8 md:col-4">
+          <div class="bg-white box-shadow text-center p-5 md:p-12">
+            <FaMapMarkerAlt className="text-primary mx-auto mb-4" size={56} />
+
+            <h4 class="mb-4 h5">{our_address}</h4>
+            <ul class="text-balance space-y-1">
+              <li>{address}</li>
+            </ul>
+          </div>
+        </div>
+        <!-- phone -->
+        <div class="col-10 sm:col-8 md:col-4">
+          <div class="bg-white box-shadow text-center p-5 md:p-12">
+            <FaPhoneAlt className="text-primary mx-auto mb-4" size={56} />
+            <h4 class="mb-4 h5">{phone_number}</h4>
+            <ul class="text-balance">
+              <li>{phone}</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Mail -->
+        <div class="col-10 sm:col-8 md:col-4">
+          <div class="bg-white box-shadow text-center p-5 md:p-12">
+            <FaEnvelope className="text-primary mx-auto mb-4" size={56} />
+            <h4 class="mb-4 h5">{message_us}</h4>
+            <ul class="text-balance">
+              <li>{email}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /contact item -->
+
+  <!-- contact form and map -->
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center g-5">
+        <!-- google map -->
+        <div class="col-10 sm:col-8 md:col-5">
+          <iframe
+            class="w-full h-96 md:h-[500px]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.47048561731!2d-80.1406798!3d25.788048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b4887af28147%3A0x7cf27ec835c20c76!2s1521%20Alton%20Rd%20%23109%2C%20Miami%20Beach%2C%20FL%2033139%2C%20USA!5e0!3m2!1sen!2sbd!4v1711167419704!5m2!1sen!2sbd"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="col-10 sm:col-8 md:col-7">
+          <h2 class="section-title">{contact_form}</h2>
+          <form action={contact_form_action} class="row">
+            <div class="md:col-6">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control border-0 rounded-none box-shadow mb-5"
+                placeholder={placeholder_name}
+              />
+            </div>
+            <div class="md:col-6">
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                class="form-control border-0 rounded-none box-shadow mb-5"
+                placeholder={placeholder_email}
+              />
+            </div>
+            <div class="md:col-6">
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                class="form-control border-0 rounded-none box-shadow mb-5"
+                placeholder={placeholder_phone}
+              />
+            </div>
+            <div class="md:col-6">
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                class="form-control border-0 rounded-none box-shadow mb-5"
+                placeholder={placeholder_subject}
+              />
+            </div>
+            <div class="col-12">
+              <textarea
+                name="message"
+                id="message"
+                class="form-control border-0 rounded-none box-shadow mb-12 py-3 px-4"
+                placeholder={placeholder_message}></textarea>
+            </div>
+            <div class="col-12">
+              <button
+                type="submit"
+                value="send"
+                class="btn btn-primary hover-ripple"
+              >
+                {send_message}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /contact form and map -->
+</Base>

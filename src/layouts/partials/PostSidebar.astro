@@ -1,0 +1,113 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import dateFormat from "@/lib/utils/dateFormat";
+import {
+  getLangFromUrl,
+  getTranslations,
+  slugSelector,
+} from "@/lib/utils/languageParser";
+import { humanize } from "@/lib/utils/textConverter";
+import type { ContentEntryMap } from "astro:content";
+
+const { tags, categories, allCategories, sortedPosts } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+
+const {
+  latest_posts,
+  categories: Tcategories,
+  tags: Ttags,
+} = await getTranslations(lang as keyof ContentEntryMap);
+
+type Post = {
+  slug: string;
+  data: {
+    title: string;
+    image: string;
+    date: string;
+  };
+};
+---
+
+<div class="lg:col-4 order-1 lg:order-2">
+  <!-- Latest Post -->
+  <div class="bg-white px-8 py-10 box-shadow mb-12">
+    <h5 class="mb-5">{latest_posts}</h5>
+    <ul class="space-y-4">
+      {
+        sortedPosts.map((post: Post) => {
+          const slugParts = post.slug.split("/");
+          slugParts[0] = "blog";
+          const modifiedSlug = slugParts.join("/");
+          post.slug = modifiedSlug;
+          return (
+            <li class="border-b border-border pb-4">
+              <div class="flex gap-x-4">
+                <ImageMod
+                  width={85 * 2}
+                  height={85 * 2}
+                  class="w-[85px] h-[85px] object-cover"
+                  src={post.data.image}
+                  alt={post.data.title}
+                />
+
+                <div>
+                  <a
+                    class="flex justify-between text-dark hover:text-primary !no-underline mb-2"
+                    href={slugSelector(`${post.slug}`, lang)}
+                  >
+                    {humanize(post.data.title)}
+                  </a>
+                  <div class="text-sm">{dateFormat(post.data.date)}</div>
+                </div>
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+
+  <!-- categories -->
+  <div class="bg-white px-8 py-10 box-shadow mb-12">
+    <h5 class="mb-5">{Tcategories}</h5>
+    <ul class="list-styled style-circle space-y-4">
+      {
+        categories.map((category: { category: string }) => {
+          const count = allCategories.filter(
+            (c: { category: string }) => c === category
+          ).length;
+          return (
+            <li class="border-b border-border pb-4">
+              <a
+                class="flex justify-between hover:text-primary !no-underline"
+                href={slugSelector(`/categories/${category}`, lang)}
+              >
+                {humanize(category as unknown as string)} <span>({count})</span>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+  <!-- tags -->
+  <div class="bg-white px-8 py-10 box-shadow mb-12">
+    <h5 class="mb-5">{Ttags}</h5>
+    <ul class="flex flex-wrap gap-2">
+      {
+        tags.map((tag: string) => {
+          return (
+            <li class="inline-block">
+              <a
+                class="btn btn-primary bg-white text-text font-normal border-none box-shadow duration-200 hover:bg-primary hover:text-white btn-sm hover-ripple"
+                href={slugSelector(`/tags/${tag}`, lang)}
+              >
+                {humanize(tag)}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</div>

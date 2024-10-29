@@ -1,0 +1,179 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import dateFormat from "@/lib/utils/dateFormat";
+import { getTranslations, supportedLang } from "@/lib/utils/languageParser";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { ContentEntryMap } from "astro:content";
+const { contact_form_action } = config.params;
+
+export async function getStaticPaths() {
+  const paths = await Promise.all(
+    supportedLang.map(async (lang) => {
+      const projects = await getSinglePage(
+        "projects",
+        lang as keyof ContentEntryMap
+      );
+
+      return projects.map((project) => ({
+        params: {
+          lang: lang || undefined,
+          single: project.slug.split("/").pop(),
+        },
+        props: {
+          project,
+        },
+      }));
+    })
+  );
+  return paths.flat();
+}
+
+const { project } = Astro.props;
+const { lang } = Astro.params;
+
+const {
+  title,
+  meta_title,
+  description,
+  image,
+  client,
+  category,
+  date,
+  status,
+} = project.data;
+
+const { Content } = await project.render();
+
+const {
+  quick_contact,
+  placeholder_name,
+  placeholder_email,
+  placeholder_message,
+  placeholder_subject,
+  placeholder_phone,
+  send_message,
+  client: Tclient,
+  category: Tcategory,
+  date: Tdate,
+  status: Tstatus,
+} = await getTranslations(lang as keyof ContentEntryMap);
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="col-10 lg:col-8">
+          <ImageMod
+            src={image}
+            class="mb-12 w-full"
+            width={1000}
+            height={900}
+            alt={title}
+          />
+
+          <div>
+            <div class="bg-dark p-8">
+              <div class="row">
+                <div class="md:col-3 col-6 mb-4 md:mb-0">
+                  <div class="md:border-r border-border/20 ml-4">
+                    <h5 class="text-white text-uppercase mb-2 h6">{Tclient}</h5>
+                    <span
+                      class="text-light/80"
+                      set:html={markdownify(client)}
+                    />
+                  </div>
+                </div>
+
+                <div class="md:col-3 col-6 mb-4 md:mb-0">
+                  <div class="md:border-r border-border/20 ml-4">
+                    <h5 class="text-white text-uppercase mb-2 h6">
+                      {Tcategory}
+                    </h5>
+                    <span
+                      class="text-light/80"
+                      set:html={markdownify(category)}
+                    />
+                  </div>
+                </div>
+
+                <div class="md:col-3 col-6 mb-4 md:mb-0">
+                  <div class="md:border-r border-border/20 ml-4">
+                    <h5 class="text-white text-uppercase mb-2 h6">{Tdate}</h5>
+                    <span class="text-light/80" set:html={dateFormat(date)} />
+                  </div>
+                </div>
+
+                <div class="md:col-3 col-6 mb-4 md:mb-0">
+                  <div class="ml-4">
+                    <h5 class="text-white text-uppercase mb-2 h6">{Tstatus}</h5>
+                    <span
+                      class="text-light/80"
+                      set:html={markdownify(status)}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content mt-12">
+              <Content />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-10 lg:col-4">
+          <!-- quick contact -->
+          <div class="bg-white px-8 py-10 box-shadow mb-12 sticky top-28">
+            <h5 class="mb-5">{quick_contact}</h5>
+            <form action={contact_form_action}>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control form-control-sm w-full border-0 rounded-0 box-shadow mb-3"
+                placeholder={placeholder_name}
+              />
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                class="form-control form-control-sm w-full border-0 rounded-0 box-shadow mb-3"
+                placeholder={placeholder_email}
+              />
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                class="form-control form-control-sm w-full border-0 rounded-0 box-shadow mb-3"
+                placeholder={placeholder_phone}
+              />
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                class="form-control form-control-sm w-full border-0 rounded-0 box-shadow mb-3"
+                placeholder={placeholder_subject}
+              />
+              <textarea
+                name="message"
+                id="message"
+                class="form-control form-control-sm w-full border-0 rounded-0 box-shadow mb-3 py-3 px-4"
+                placeholder={placeholder_message}></textarea>
+              <button type="submit" value="send" class="btn btn-primary">
+                {send_message}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

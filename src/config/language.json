@@ -1,0 +1,20 @@
+[
+  {
+    "languageName": "Es",
+    "languageCode": "es",
+    "contentDir": "spanish",
+    "weight": 1
+  },
+  {
+    "languageName": "En",
+    "languageCode": "en",
+    "contentDir": "english",
+    "weight": 2
+  },
+  {
+    "languageName": "Pr",
+    "languageCode": "pr",
+    "contentDir": "portuguese",
+    "weight": 3
+  }
+]

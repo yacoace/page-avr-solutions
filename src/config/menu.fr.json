@@ -1,0 +1,30 @@
+{
+  "main": [
+    { "name": "Accueil", "url": "/" },
+    { "name": "À propos", "url": "/about" },
+    { "name": "Services", "url": "/services" },
+    { "name": "Blog", "url": "/blog" },
+    { "name": "Équipe", "url": "/team" },
+    { "name": "Contact", "url": "/contact" },
+    {
+      "name": "Pages",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        { "name": "Projets", "url": "/projects" },
+        { "name": "Auteurs", "url": "/authors" },
+        { "name": "Conditions d'utilisation", "url": "/terms" },
+        { "name": "Politique de confidentialité", "url": "/privacy-policy" },
+        { "name": "Éléments", "url": "/elements" },
+        { "name": "Page 404", "url": "/404" }
+      ]
+    }
+  ],
+  "footer": [
+    { "name": "À propos de nous", "url": "/about" },
+    { "name": "Politique de confidentialité", "url": "/privacy-policy" },
+    { "name": "Contactez-nous", "url": "/contact" },
+    { "name": "Services", "url": "/services" },
+    { "name": "Projets", "url": "/projects" }
+  ]
+}

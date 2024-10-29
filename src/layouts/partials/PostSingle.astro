@@ -1,0 +1,141 @@
+---
+import BlogCard from "@/components/BlogCard.astro";
+import Share from "@/components/Share.astro";
+import config from "@/config/config.json";
+import Disqus from "@/helpers/Disqus";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
+import dateFormat from "@/lib/utils/dateFormat";
+import { getTranslations, slugSelector } from "@/lib/utils/languageParser";
+import similarItems from "@/lib/utils/similarItems";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
+import type { ContentEntryMap } from "astro:content";
+import ImageMod from "../components/ImageMod.astro";
+import PostSidebar from "./PostSidebar.astro";
+const { default_language } = config.settings;
+
+const COLLECTION_FOLDER = "blog";
+const { post } = Astro.props;
+let { lang } = Astro.params;
+
+if (!lang) {
+  lang = default_language;
+}
+
+const posts = await getSinglePage(
+  COLLECTION_FOLDER,
+  lang as keyof ContentEntryMap
+);
+const similarPosts = similarItems(post, posts);
+const { Content } = await post.render();
+const { title, description, author, image, date, tags } = post.data;
+
+const langCollection: keyof ContentEntryMap = lang as keyof ContentEntryMap;
+const allCategoriesForCount = await getAllTaxonomy(
+  langCollection,
+  "categories"
+);
+const allCategories = await getTaxonomy(langCollection, "categories");
+const allTags = await getTaxonomy(langCollection, "tags");
+const sortedPosts = sortByDate(posts);
+
+const {
+  tags: Ttags,
+  by,
+  on,
+  share,
+  related_posts,
+} = await getTranslations(lang as keyof ContentEntryMap);
+---
+
+<section class="section pt-7">
+  <div class="container">
+    <div class="row justify-center">
+      <article class="lg:col-8">
+        {
+          image && (
+            <div class="mb-10">
+              <ImageMod
+                src={image}
+                height={600}
+                width={1200}
+                alt={title}
+                class="w-full rounded"
+                format="webp"
+              />
+            </div>
+          )
+        }
+        <ul class="mb-4">
+          <li class="card-meta">
+            {by}
+            <strong>
+              <a
+                href={slugSelector(`/authors/${slugify(author)}`, lang)}
+                set:html={humanize(author)}
+              />/ {on}
+              <strong>{dateFormat(date)}</strong>
+            </strong>
+          </li>
+        </ul>
+
+        <h1 set:html={markdownify(title)} class="h2 mb-4" />
+        <div class="content mb-10">
+          <Content />
+        </div>
+        <div class="row items-start justify-between">
+          <div class="mb-10 flex items-center lg:col-5 lg:mb-0">
+            <h5 class="mr-3">{Ttags} :</h5>
+            <ul>
+              {
+                tags.map((tag: string) => (
+                  <li class="inline-block">
+                    <a
+                      class="btn btn-primary bg-white text-text font-normal border-none box-shadow duration-200 hover:bg-primary hover:text-white btn-sm mr-1"
+                      href={slugSelector(`/tags/${slugify(tag)}`, lang)}
+                    >
+                      {humanize(tag)}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <div class="flex items-center lg:col-4">
+            <h5 class="mr-3">{share} :</h5>
+            <Share
+              className=""
+              title={title}
+              description={description}
+              slug={post.slug}
+            />
+          </div>
+        </div>
+        <Disqus className="mt-20" client:load />
+      </article>
+
+      <!-- Sidebar -->
+      <PostSidebar
+        categories={allCategories}
+        tags={allTags}
+        allCategories={allCategoriesForCount}
+        sortedPosts={sortedPosts.slice(0, 3)}
+      />
+    </div>
+
+    <!-- Related posts -->
+    <div class="section pb-0">
+      <h2 class="h3 mb-12 text-center">{related_posts}</h2>
+      <div class="row justify-center">
+        {
+          similarPosts.map((post) => (
+            <div class="lg:col-4 md:col-6 mb-14">
+              <BlogCard data={post} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

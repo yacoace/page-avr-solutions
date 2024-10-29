@@ -1,0 +1,97 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import Social from "@/components/Social.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { supportedLang } from "@/lib/utils/languageParser";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { ContentEntryMap } from "astro:content";
+
+export async function getStaticPaths() {
+  const paths = await Promise.all(
+    supportedLang.map(async (lang) => {
+      const members = await getSinglePage(
+        "team",
+        lang as keyof ContentEntryMap,
+      );
+
+      return members.map((member) => ({
+        params: {
+          lang: lang || undefined,
+          single: member.slug.split("/").pop(),
+        },
+        props: {
+          member,
+        },
+      }));
+    }),
+  );
+  return paths.flat();
+}
+
+const { member } = Astro.props;
+const {
+  title,
+  meta_title,
+  description,
+  designation,
+  image,
+  skill_title,
+  skills,
+  social,
+} = member.data;
+
+const { Content } = await member.render();
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 mx-auto lg:col-4">
+          <ImageMod
+            src={image}
+            class="mx-auto mb-10 w-full sticky top-32"
+            height={500}
+            width={500}
+            alt={title}
+            format="webp"
+          />
+        </div>
+        <div class="lg:col-8">
+          <span class="section-title-border"></span>
+          <h1 class="mb-4" set:html={markdownify(title)} />
+          <p set:html={markdownify(designation)} />
+          <Social source={social} className="social-icon-team" />
+          <div class="content mb-10">
+            <Content />
+          </div>
+          <div>
+            <h4>{skill_title}</h4>
+            {
+              skills.map((skill: { label: string; percentage: string }) => (
+                <div class="mt-3">
+                  <p class="font-semibold text-lg font-secondary text-dark">
+                    {skill.label} -- {skill.percentage}
+                  </p>
+
+                  <div class="w-full bg-light max-w-sm mt-2 mb-6 overflow-hidden">
+                    <div
+                      class="bg-primary text-xs leading-none py-1"
+                      style={{ width: `${skill.percentage}` }}
+                    />
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

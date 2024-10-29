@@ -1,0 +1,39 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+
+const { bannerFeature } = Astro.props;
+---
+
+{
+  bannerFeature?.enable && (
+    <section class="mt-[-180px] lg:mt-[-200px] xl:mt-[-230px] relative z-10">
+      <div class="container">
+        <div class="row g-4">
+          {bannerFeature.feature_item.map(
+            (item: { name: string; content: string; icon: string }) => (
+              <div class="lg:col-3 sm:col-6 group">
+                <div class="bg-white py-12 px-4 text-center box-shadow transition hover:bg-dark flex flex-col items-center duration-200">
+                  <div class="icon-bg mb-4 water-wave flex items-center justify-center">
+                    <DynamicIcon
+                      icon={item.icon}
+                      className="icon group-hover:text-white"
+                    />
+                  </div>
+                  <h4
+                    class="mb-4 group-hover:text-white font-semibold h5"
+                    set:html={markdownify(item.name ?? "")}
+                  />
+                  <p
+                    class="group-hover:text-white/80 text-balance"
+                    set:html={markdownify(item.content ?? "")}
+                  />
+                </div>
+              </div>
+            ),
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}
