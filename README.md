@@ -22,4 +22,7 @@
 -- git checkout main
 
 # PASO 8
+-- git pull
+
+# PASO 9
 -- git branch -d newbranch
