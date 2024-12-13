@@ -69,32 +69,33 @@ banner_feature:
       content: "We deliver reliable and scalable solutions, guaranteeing high quality standards."
 
 ######### funfacts ########
-funfacts:
-  enable: true
-  funfacts_item:
+###funfacts:
+###  enable: true
+###  funfacts_item:
     # fanfacts item loop
-    - name: "project done"
-      count: "50"
-      icon: "FaBullseye"
+###    - name: "project done"
+###      count: "50"
+###      icon: "FaBullseye"
 
     # fanfacts item loop
-    - name: "Years Experience"
-      count: "25"
-      icon: "FaCalendarDays"
+###    - name: "Years Experience"
+###      count: "25"
+###      icon: "FaCalendarDays"
 
     # fanfacts item loop
-    - name: "Awards Win"
-      count: "250"
-      icon: "FaAward"
+###    - name: "Awards Win"
+###      count: "250"
+###      icon: "FaAward"
 
     # fanfacts item loop
-    - name: "Happy Coustomers"
-      count: "500"
-      icon: "FaRegFaceSmile"
+###    - name: "Happy Coustomers"
+###      count: "500"
+###      icon: "FaRegFaceSmile"
+
 
 ########## feature ##########
 feature:
-  enable: true
+  enable: false
   subtitle: "Why Choose Us"
   title: "Why They Choose Bexar"
   image: "/images/feature/feature.png"
