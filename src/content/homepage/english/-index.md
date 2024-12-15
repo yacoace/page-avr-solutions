@@ -95,21 +95,21 @@ banner_feature:
 
 ########## feature ##########
 feature:
-  enable: false
+  enable: true
   subtitle: "Why Choose Us"
-  title: "Why They Choose Bexar"
+  title: "Why They Choose AVR"
   image: "/images/feature/feature.png"
-  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius tempor incididunt ut labore."
+  content: "We stand out for our flexibility and personalized approach to each client."
   feature_item:
     # feature item loop
-    - name: "Creative Design"
+    - name: "Proven Expertise"
       icon: FaSnowflake
-      content: "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia."
+      content: "Our team of experts in advanced technologies ensures reliable, scalable solutions tailored to your needs."
 
     # feature item loop
-    - name: "Pixel Perfect Coding"
+    - name: " Innovative Energy"
       icon: FaCode
-      content: "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia."
+      content: "We are a young and dynamic company, bringing fresh and creative ideas to tackle current and future technological challenges."
 
 ######## blog #######
 latest_news:

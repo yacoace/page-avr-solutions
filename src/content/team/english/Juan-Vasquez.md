@@ -1,8 +1,8 @@
 ---
-title: "Alex Monatinmo"
+title: "Juan Vasquez"
 description: "this is meta description"
-image: "/images/team/team-2.jpg"
-designation: "Designer"
+image: "/images/team/team-4.jpg"
+designation: "Developer"
 social:
   - name: facebook
     icon: FaFacebook
