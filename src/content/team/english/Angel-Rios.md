@@ -1,5 +1,5 @@
 ---
-title: "Jennifer Garner"
+title: "Angel Rios"
 description: "this is meta description"
 image: "/images/team/team-3.jpg"
 designation: "Developer"

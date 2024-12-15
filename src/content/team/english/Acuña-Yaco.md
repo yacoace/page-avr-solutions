@@ -1,8 +1,8 @@
 ---
-title: "Brendan Alestico"
+title: "Yaco Acuña"
 description: "this is meta description"
-image: "/images/team/team-4.jpg"
-designation: "Marketer"
+image: "/images/team/team-2.jpg"
+designation: "Developer"
 social:
   - name: facebook
     icon: FaFacebook
