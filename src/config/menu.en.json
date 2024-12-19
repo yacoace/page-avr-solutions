@@ -24,7 +24,6 @@
     { "name": "About Us", "url": "/about" },
     { "name": "Privacy Policy", "url": "/privacy-policy" },
     { "name": "Contact Us", "url": "/contact" },
-    { "name": "Services", "url": "/services" },
-    { "name": "Projects", "url": "/projects" }
+    { "name": "Services", "url": "/services" }
   ]
 }
