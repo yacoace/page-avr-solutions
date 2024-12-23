@@ -4,13 +4,13 @@ description: "this is meta description"
 image: "/images/team/team-2.jpg"
 designation: "Developer"
 social:
-  - name: facebook
-    icon: FaFacebook
-    link: "#"
+#  - name: facebook
+#    icon: FaFacebook
+#    link: "#"
 
-  - name: twitter
-    icon: FaTwitter
-    link: "#"
+#  - name: twitter
+#    icon: FaTwitter
+#    link: "#"
 
   - name: github
     icon: FaGithub
