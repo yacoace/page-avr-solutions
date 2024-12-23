@@ -11,18 +11,18 @@ philosophy_section:
     - title: "Our Mission"
       content: "To digitalize and optimize businesses through advanced technologies, enhancing operational efficiency and driving sustainable growth for our clients."
       list:
-        - "Quality Services"
-        - "Clients Satisfaction"
+        - "Commitment to Quality"
+        - "Sustainable Results"
     - title: "OUR APPROACH"
       content: "We listen, understand, and design tailored solutions that integrate innovation and practicality, ensuring effective digital transformation for every business."
       list:
-        - "Quality Services"
-        - "Clients Satisfaction"
+        - "Personalized Attention"
+        - "Innovative Solutions"
     - title: "OUR PHILOSOPHY"
       content: "We believe in technology as a tool for progress. With passion, ethics, and dedication, we aim to create a positive impact in every project."
       list:
-        - "Quality Services"
-        - "Clients Satisfaction"
+        - "Passion for Technology"
+        - "Professional Ethics"
 
 about_section:
   enable: true
