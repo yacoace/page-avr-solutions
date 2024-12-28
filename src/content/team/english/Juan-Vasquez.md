@@ -23,26 +23,26 @@ social:
 # skill
 skill_title: Skills
 skills:
-  - label: Co-ordination
+  - label: Process Automation
+    percentage: 80%
+
+  - label: Software Development
     percentage: 85%
 
-  - label: Programming
-    percentage: 79%
-
-  - label: Communication
-    percentage: 95%
+  - label: Data Analysis & Reporting
+    percentage: 93%
 ---
 
 #### Work History & Feedback
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis.
+Juan Daniel Vasquez Rengifo is a Mechatronic Engineer with extensive experience in business process automation and software development. His work focuses on leveraging tools like Power Platform, Python, and SQL Server to deliver tailored solutions for operational efficiency. With a strong background in creating interactive dashboards, developing custom applications, and integrating IoT systems, he ensures innovative and scalable solutions for digital transformation.
 
 #### Profile Analytics
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+Juan excels in designing and implementing process automation workflows using Power Automate and Power Apps, enabling seamless data integration and efficient operations. His expertise in data analysis and reporting with Power BI supports informed decision-making through real-time insights and dynamic dashboards.
 
 #### Activities
 
-- Enim ad minim veniam, quis nostrud
-- Sed do eiusmod tempor consectetur incididunt ut
-- Excepteur sint occaecat cupidatat non proident sunt in culpa
+- Developed custom applications in Power Apps for process optimization and mobile data management.
+- Designed advanced dashboards in Power BI to provide actionable insights for decision-making.
+- Created IoT solutions for data collection and real-time monitoring of business processes.
