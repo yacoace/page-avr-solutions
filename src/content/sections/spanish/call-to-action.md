@@ -1,8 +1,8 @@
 ---
 enable: true
-title: "AVR provides the smart solution for your business"
+title: "AVR ofrece la solución inteligente para su negocio"
 button:
   enable: true
-  label: "get an quote"
+  label: "obtener una cotización"
   link: "/contact"
 ---
