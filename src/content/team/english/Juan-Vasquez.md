@@ -18,7 +18,7 @@ social:
 
   - name: linkedin
     icon: FaLinkedin
-    link: "#"
+    link: "https://www.linkedin.com/in/juan-daniel-vasquez-rengifo/"
 
 # skill
 skill_title: Skills
