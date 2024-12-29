@@ -2,7 +2,7 @@
 title: "Yaco Acuña"
 description: "this is meta description"
 image: "/images/team/team-2.jpg"
-designation: "Developer"
+designation: "Desarrollador"
 social:
 #  - name: facebook
 #    icon: FaFacebook
@@ -14,35 +14,35 @@ social:
 
   - name: github
     icon: FaGithub
-    link: "#"
+    link: "https://github.com/yacoace"
 
   - name: linkedin
     icon: FaLinkedin
-    link: "#"
+    link: "https://www.linkedin.com/in/yacoace/"
 
 # skill
 skill_title: Skills
 skills:
-  - label: Co-ordination
+  - label: Gestión de Proyectos (SCRUM, PMBOK, WCS)
+    percentage: 90%
+
+  - label: Desarrollo de Software
+    percentage: 80%
+
+  - label: Automatización de Procesos Empresariales e Industriales (RPA, ETL, IoT, PLC)
     percentage: 85%
-
-  - label: Programming
-    percentage: 79%
-
-  - label: Communication
-    percentage: 95%
 ---
 
 #### Work History & Feedback
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis.
+Con más de 3 años de experiencia, he trabajado como Coordinador de Laboratorio, gestionando proyectos de automatización y transformación digital desde la etapa inicial hasta su despliegue, asegurando la integración efectiva de tecnologías innovadoras. Mi experiencia como Analista de Procesos incluye la ejecución de proyectos de desarrollo de software enfocados en aplicaciones móviles, de escritorio y web, adaptadas a las necesidades específicas de cada cliente. Además, como Desarrollador en Power Platform, he implementado soluciones empresariales integradas con entornos de Microsoft 365, optimizando procesos en compañías de sectores diversos como minería, legal, laboratorios y retail, contribuyendo significativamente a la transformación digital y mejora continua de las organizaciones. 
 
 #### Profile Analytics
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+Ingeniero Mecatrónico por la Universidad Nacional de Ingeniería, especialista en Instrumentación y Control Industrial por TECSUP, y miembro de la International Society of Automation (ISA). Cuento con más de 3 años de experiencia como Coordinador de Laboratorio, Analista de Procesos, Desarrollador Power Platform y Especialista en Microsoft 365, liderando la automatización de procesos empresariales mediante proyectos de desarrollo de software y hardware.
 
 #### Activities
 
-- Enim ad minim veniam, quis nostrud
-- Sed do eiusmod tempor consectetur incididunt ut
-- Excepteur sint occaecat cupidatat non proident sunt in culpa
+- Gestión integral de proyectos de automatización y transformación digital
+- Desarrollo de soluciones tecnológicas personalizadas programando aplicaciones móviles, de escritorio y web
+- Implementación de entornos Microsoft integrados y despliegue de soluciones empresariales con Power Platform y Microsoft 365

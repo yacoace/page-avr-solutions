@@ -23,13 +23,13 @@ social:
 # skill
 skill_title: Habilidades
 skills:
-  - label: Automatización de procesos
+  - label: Automatización de procesos empresariales
     percentage: 80%
 
-  - label: Desarrollo de software
+  - label: Gestión de proyectos tecnológicos
     percentage: 85%
 
-  - label: Análisis de datos y generación de informes
+  - label: Instrumentación y Control Industrial
     percentage: 93%
 ---
 

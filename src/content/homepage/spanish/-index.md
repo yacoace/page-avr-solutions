@@ -69,51 +69,51 @@ banner_feature:
       content: "Entregamos soluciones confiables y escalables, garantizando altos estándares de calidad."
 
 ######### funfacts ########
-funfacts:
-  enable: true
-  funfacts_item:
+###funfacts:
+###  enable: true
+###  funfacts_item:
     # fanfacts item loop
-    - name: "project done"
-      count: "12"
-      icon: "FaBullseye"
+###    - name: "project done"
+###      count: "50"
+###      icon: "FaBullseye"
 
     # fanfacts item loop
-    - name: "Years Experience"
-      count: "1"
-      icon: "FaCalendarDays"
+###    - name: "Years Experience"
+###      count: "25"
+###      icon: "FaCalendarDays"
 
     # fanfacts item loop
-    - name: "Awards Win"
-      count: "0"
-      icon: "FaAward"
+###    - name: "Awards Win"
+###      count: "250"
+###      icon: "FaAward"
 
     # fanfacts item loop
-    - name: "Happy Coustomers"
-      count: "8"
-      icon: "FaRegFaceSmile"
+###    - name: "Happy Coustomers"
+###      count: "500"
+###      icon: "FaRegFaceSmile"
 
 ########## feature ##########
 feature:
   enable: true
-  subtitle: "Why Choose Us"
-  title: "Why They Choose Bexar"
+  subtitle: "¿Por qué elegirnos?"
+  title: "Por qué eligen AVR"
   image: "/images/feature/feature.png"
-  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius tempor incididunt ut labore."
+  content: "Nos destacamos por nuestra flexibilidad y trato personalizado con cada cliente."
   feature_item:
     # feature item loop
-    - name: "Creative Design"
+    - name: "Experiencia comprobada"
       icon: FaSnowflake
-      content: "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia."
+      content: "Nuestro equipo de expertos en tecnologías avanzadas garantiza soluciones confiables, escalables y adaptadas a sus necesidades."
 
     # feature item loop
-    - name: "Pixel Perfect Coding"
+    - name: " Energía innovadora"
       icon: FaCode
-      content: "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia."
+      content: "Somos una empresa joven y dinámica, que aporta ideas frescas y creativas para abordar los desafíos tecnológicos actuales y futuros."
 
 ######## blog #######
 latest_news:
   enable: true
   show_item: 3
-  title: "Learn From Bexar"
-  sub_title: "Latest News"
+  title: "Aprenda de AVR"
+  sub_title: "Últimas noticias"
 ---
