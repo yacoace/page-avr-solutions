@@ -14,35 +14,35 @@ social:
 
   - name: github
     icon: FaGithub
-    link: "#"
+    link: "https://github.com/yacoace"
 
   - name: linkedin
     icon: FaLinkedin
-    link: "#"
+    link: "https://www.linkedin.com/in/yacoace/"
 
 # skill
 skill_title: Skills
 skills:
-  - label: Co-ordination
+  - label: Project Management (SCRUM, PMBOK, WCS)
+    percentage: 90%
+
+  - label: Software Development
+    percentage: 80%
+
+  - label: Business and Industrial Process Automation (RPA, ETL, IoT, PLC)
     percentage: 85%
-
-  - label: Programming
-    percentage: 79%
-
-  - label: Communication
-    percentage: 95%
 ---
 
 #### Work History & Feedback
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis.
+With over 3 years of experience, I have worked as a Laboratory Coordinator, managing automation and digital transformation projects from the initial stage to deployment, ensuring the effective integration of innovative technologies. My experience as a Process Analyst includes executing software development projects focused on mobile, desktop, and web applications tailored to specific client needs. Additionally, as a Power Platform Developer, I have implemented business solutions integrated with Microsoft 365 environments, optimizing processes in various sectors such as mining, legal, laboratories, and retail, significantly contributing to digital transformation and continuous improvement in organizations.
 
 #### Profile Analytics
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+Mechatronics Engineer from the National University of Engineering, Specialist in Industrial Instrumentation and Control from TECSUP, and a member of the International Society of Automation (ISA). I have over 3 years of experience as a Laboratory Coordinator, Process Analyst, Power Platform Developer, and Microsoft 365 Specialist, leading business process automation through software and hardware development projects.
 
 #### Activities
 
-- Enim ad minim veniam, quis nostrud
-- Sed do eiusmod tempor consectetur incididunt ut
-- Excepteur sint occaecat cupidatat non proident sunt in culpa
+- Comprehensive management of automation and digital transformation projects
+- Development of customized technological solutions by programming mobile, desktop, and web applications
+- Implementation of integrated Microsoft environments and deployment of business solutions with Power Platform and Microsoft 365

@@ -14,7 +14,7 @@ social:
 
   - name: github
     icon: FaGithub
-    link: "#"
+    link: "https://github.com/WallsPain"
 
   - name: linkedin
     icon: FaLinkedin
