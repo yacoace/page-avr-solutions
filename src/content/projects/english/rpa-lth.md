@@ -4,32 +4,32 @@ date: 2024-10-30T10:47:55+06:00
 description: "this is meta description"
 image: "/images/project/project-RPA-LTH.png"
 client: "CONSORCIO CAROLINA"
-category: "Plan"
+category: "Process Automation"
 status: "In Process"
 ---
 
-Para Consorcio Carolina, desarrollamos una solución de Automatización Robótica de Procesos (RPA) utilizando Python y sus librerías avanzadas. La RPA, diseñada específicamente para el Lake Titicaca Hotel (LTH) en Puno, automatiza la descarga diaria de reportes críticos relacionados con las llegadas al hotel y las ocupaciones de habitaciones. Este sistema se conecta automáticamente al escritorio remoto (RDP) del hotel, accede al software interno y extrae los datos de manera estructurada. Inicialmente, la RPA procesa información histórica desde años anteriores, garantizando la consolidación de datos completos y actualizados. Luego, diariamente, continúa extrayendo nuevos reportes y tratándolos para estandarizarlos. Los datos procesados se almacenan en listas de SharePoint, desencadenando un flujo automatizado que actualiza un Power BI diseñado para la gerencia. Este reporte en tiempo real facilita la supervisión y la toma de decisiones estratégicas.
+For Consorcio Carolina, we developed a Robotic Process Automation (RPA) solution using Python and its advanced libraries. The RPA, specifically designed for the Lake Titicaca Hotel (LTH) in Puno, automates the daily download of critical reports related to hotel arrivals and room occupancy. This system automatically connects to the hotel’s Remote Desktop (RDP), accesses the internal software, and extracts data in a structured manner. Initially, the RPA processes historical information from previous years, ensuring the consolidation of complete and updated data. Subsequently, it continues to extract new reports daily, standardizing them for consistent processing. The processed data is stored in SharePoint lists, triggering an automated workflow that updates a Power BI dashboard designed for management. This real-time reporting facilitates supervision and strategic decision-making.
 
-### Benifits of service
+### Benefits of the Service
 
-El desarrollo de esta RPA aporta los siguientes beneficios clave:
+The development of this RPA provides the following key benefits:
 
-1. Automatización Completa: Elimina tareas manuales repetitivas, ahorrando tiempo y reduciendo errores humanos.
-2. Centralización de Datos: Todos los reportes son almacenados de manera organizada en una base de datos en SharePoint.
-3. Acceso en Tiempo Real: La gerencia puede supervisar datos actualizados gracias a la integración con Power BI.
-4. Procesamiento de Datos Eficiente: Los datos desorganizados son transformados automáticamente a un formato estándar, listo para análisis.
-5. Interfaz de Usuario Amigable: La RPA incluye una interfaz ejecutable fácil de usar, instalada en las PCs de los usuarios responsables.
-6. Escalabilidad: El diseño de la solución permite adaptarla a otros procesos o áreas del hotel si es necesario.
-7. Actualización Diaria Automática: Una vez completada la carga histórica, los nuevos datos son extraídos y procesados automáticamente cada día.
+1. Complete Automation: Eliminates repetitive manual tasks, saving time and reducing human errors.  
+2. Data Centralization: All reports are systematically stored in a SharePoint database.  
+3. Real-Time Access: Management can monitor updated data through Power BI integration.  
+4. Efficient Data Processing: Disorganized data is automatically transformed into a standardized format ready for analysis.  
+5. User-Friendly Interface: The RPA includes an executable interface that is easy to use, installed on the PCs of responsible users.  
+6. Scalability: The solution's design allows adaptation to other processes or hotel areas if needed.  
+7. Daily Automatic Updates: After completing the historical load, new data is extracted and processed automatically each day.  
 
 ### Business Strategy
 
-Para lograr el éxito del proyecto, AVR Solutions implementó las siguientes estrategias:
+To ensure the project's success, AVR Solutions implemented the following strategies:  
 
-1. Optimización de Procesos Manuales
-2. Generación de Valor con Datos
-3. Adopción de Tecnología Moderna
+1. Optimization of Manual Processes  
+2. Generating Value with Data  
+3. Adoption of Modern Technology  
 
-### Analyze your business
+### Analyze Your Business
 
-La solución implementada no solo digitaliza procesos previamente manuales y propensos a errores, sino que también habilita al Consorcio Carolina y al Lake Titicaca Hotel para operar con datos precisos, organizados y disponibles en tiempo real. La automatización de tareas operativas libera recursos humanos para enfocarse en actividades de mayor valor estratégico, mientras que la reportería integrada con Power BI proporciona a la gerencia una visión consolidada para monitorear el desempeño del hotel. Este proyecto fortalece la capacidad del cliente para responder ágilmente a las demandas del mercado, mejorando la eficiencia operativa y facilitando la toma de decisiones basada en datos confiables.
+The implemented solution not only digitizes previously manual and error-prone processes but also enables Consorcio Carolina and Lake Titicaca Hotel to operate with accurate, organized, and real-time data. Automating operational tasks frees up human resources to focus on higher-value strategic activities, while the integrated Power BI reporting provides management with a consolidated view for monitoring the hotel’s performance. This project strengthens the client’s ability to respond swiftly to market demands, improving operational efficiency and facilitating data-driven decision-making.

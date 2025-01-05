@@ -1,36 +1,36 @@
 ---
-title: "DESARROLLO DE APLICACIÓN WEB PARA CONTROL DE OKR'S LEGALES"
+title: "DEVELOPMENT OF A WEB APPLICATION FOR LEGAL OKR CONTROL"
 date: 2024-12-15T10:47:55+06:00
 description: "this is meta description"
 image: "/images/project/project-CANVAS-LEGAL-APP.png"
 client: "CANVAS LEGAL"
-category: "APLICACIÓN WEB, MÓVIL O DE ESCRITORIO"
-status: "FINALIZADO"
+category: "WEB, MOBILE, OR DESKTOP APPLICATION"
+status: "COMPLETED"
 ---
 
-Se desarrolló una solución que permita a las áreas legales monitorear y gestionar los objetivos clave y resultados (OKR’s) establecidos según la metodología implementada por Canvas Legal. Esta solución, construida en la plataforma Power Platform de Microsoft, aprovecha herramientas como Power Apps, SharePoint, Power Automate y Power BI, integrando las capacidades de colaboración y automatización ya disponibles en el entorno Microsoft Office 365.
+A solution was developed to enable legal departments to monitor and manage the key objectives and results (OKRs) established according to the methodology implemented by Canvas Legal. This solution, built on Microsoft's Power Platform, leverages tools such as Power Apps, SharePoint, Power Automate, and Power BI, integrating collaboration and automation capabilities already available within the Microsoft Office 365 environment.
 
-La aplicación está diseñada para ser accesible tanto desde navegadores web como desde dispositivos móviles, ofreciendo una experiencia de usuario fluida y adaptada. Su funcionalidad en tiempo real permite a los usuarios actualizar el estado de las tareas, cambiar descripciones, asignar responsables, agregar comentarios y monitorear el progreso hacia los objetivos establecidos. Además, integra flujos automatizados que envían alertas programadas cuando las tareas están próximas a vencer o cuando se realizan modificaciones, asegurando un seguimiento continuo y efectivo.
+The application is designed to be accessible from both web browsers and mobile devices, offering a seamless and user-friendly experience. Its real-time functionality allows users to update task statuses, change descriptions, assign responsibilities, add comments, and monitor progress toward established goals. Additionally, it integrates automated workflows that send scheduled alerts when tasks are nearing their deadlines or when modifications are made, ensuring continuous and effective tracking.
 
-### Benifits of service
+### Benefits of the Service
 
-La solución desarrollada aporta múltiples ventajas a las empresas que buscan maximizar la gestión de sus OKR’s legales:
+The developed solution provides multiple advantages to companies seeking to maximize the management of their legal OKRs:
 
-1. Monitoreo Efectivo: Seguimiento en tiempo real del progreso hacia objetivos clave, asegurando el cumplimiento dentro de los plazos establecidos.
-2. Acceso Universal: Aplicación accesible desde la web o dispositivos móviles, lo que permite a los usuarios gestionar tareas desde cualquier lugar.
-3. Optimización de Recursos: Aprovechamiento de las herramientas gratuitas incluidas en las licencias de Microsoft Office 365, minimizando costos adicionales.
-4. Automatización de Alertas: Flujos de Power Automate que envían notificaciones automáticas, reduciendo el riesgo de incumplimientos.
-5. Escalabilidad y Seguridad: Uso de SharePoint como base de datos centralizada, garantizando una gestión segura y ampliable.
-6. Colaboración Simplificada: Interfaz intuitiva que facilita la colaboración entre equipos, mejorando la productividad y comunicación interna.
+1. Effective Monitoring: Real-time tracking of progress toward key objectives, ensuring deadlines are met.
+2. Universal Access: Accessible via web or mobile devices, enabling users to manage tasks from anywhere.
+3. Resource Optimization: Utilization of free tools included in Microsoft Office 365 licenses, minimizing additional costs.
+4. Alert Automation: Power Automate workflows send automatic notifications, reducing the risk of missed deadlines.
+5. Scalability and Security: SharePoint serves as a centralized database, ensuring secure and expandable management.
+6.*Simplified Collaboration: Intuitive interface facilitates team collaboration, improving productivity and internal communication.
 
 ### Business Strategy
 
-Para garantizar el éxito del proyecto, AVR Solutions implementó una estrategia de negocio enfocada en:
+To ensure the success of the project, AVR Solutions implemented a business strategy focused on:
 
-1. Aprovechamiento de Infraestructura Existente
-2. Enfoque en la Experiencia de Usuario
-3. Automatización y Seguimiento
+1. Leveraging Existing Infrastructure  
+2. Emphasizing User Experience  
+3. Automation and Tracking  
 
-### Analyze your business
+### Analyze Your Business
 
-El desarrollo de esta aplicación aborda la necesidad crítica de las empresas de gestionar eficazmente sus OKR’s legales, un desafío común debido al desaprovechamiento de herramientas tecnológicas ya incluidas en sus licencias de Microsoft Office 365. Al proporcionar una solución personalizada y automatizada, se optimizan los procesos internos, reduciendo tareas manuales y asegurando un seguimiento continuo del cumplimiento de objetivos. Esto no solo mejora la productividad de las áreas legales, sino que también fortalece la capacidad de las empresas para cumplir sus metas estratégicas dentro de los plazos establecidos, generando un impacto positivo en su desempeño global.
+The development of this application addresses the critical need for companies to effectively manage their legal OKRs, a common challenge due to underutilization of technological tools already included in their Microsoft Office 365 licenses. By providing a customized and automated solution, internal processes are optimized, manual tasks are reduced, and continuous tracking of goal compliance is ensured. This not only improves the productivity of legal departments but also strengthens companies' ability to meet their strategic goals within established deadlines, generating a positive impact on overall performance.

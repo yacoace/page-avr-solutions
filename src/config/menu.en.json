@@ -4,12 +4,14 @@
     { "name": "About", "url": "/about" },
     { "name": "Services", "url": "/services" },
     { "name": "Team", "url": "/team" },
-    { "name": "Contact", "url": "/contact" }
+    { "name": "Contact", "url": "/contact" },
+    { "name": "Projects", "url": "/projects" }
   ],
   "footer": [
     { "name": "About Us", "url": "/about" },
     { "name": "Privacy Policy", "url": "/privacy-policy" },
     { "name": "Contact Us", "url": "/contact" },
-    { "name": "Services", "url": "/services" }
+    { "name": "Services", "url": "/services" },
+    { "name": "Projects", "url": "/projects" }
   ]
 }
