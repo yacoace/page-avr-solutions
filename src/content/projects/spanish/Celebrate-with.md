@@ -1,10 +1,10 @@
 ---
-title: "Art Institute of Chicago"
+title: "Celebrate with Stoli"
 date: 2019-02-07T10:47:55+06:00
 description: "this is meta description"
-image: "/images/project/project-6.jpg"
+image: "/images/project/project-4.jpg"
 client: "Australia"
-category: "Investment"
+category: "Marketing"
 status: "In Process"
 ---
 
