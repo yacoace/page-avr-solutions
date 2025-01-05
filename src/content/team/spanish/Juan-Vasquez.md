@@ -14,7 +14,7 @@ social:
 
   - name: github
     icon: FaGithub
-    link: "#"
+    link: "https://github.com/WallsPain"
 
   - name: linkedin
     icon: FaLinkedin
@@ -45,4 +45,4 @@ Juan se destaca en el diseño e implementación de flujos de trabajo de automati
 
 - Desarrolló aplicaciones personalizadas en Power Apps para la optimización de procesos y la gestión de datos móviles.
 - Diseñó paneles avanzados en Power BI para proporcionar información útil para la toma de decisiones.
-- Creó soluciones de IoT para la recopilación de datos y el monitoreo en tiempo real de los procesos comerciales.
+- Creó soluciones de IoT para la recopilación de datos y el monitoreo en tiempo real de los procesos comerciales. 
