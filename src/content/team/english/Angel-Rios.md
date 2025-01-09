@@ -14,11 +14,11 @@ social:
 
   - name: github
     icon: FaGithub
-    link: "#"
+    link: "https://github.com/GreenTeethSkull"
 
   - name: linkedin
     icon: FaLinkedin
-    link: "#"
+    link: "https://www.linkedin.com/in/angel-alfredo-rios-villacis/"
 
 # skill
 skill_title: Skills
