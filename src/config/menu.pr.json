@@ -1,0 +1,17 @@
+{
+  "main": [
+    { "name": "Início", "url": "/" },
+    { "name": "Sobre", "url": "/about" },
+    { "name": "Serviços", "url": "/services" },
+    { "name": "Equipe", "url": "/team" },
+    { "name": "Contato", "url": "/contact" },
+    { "name": "Projetos", "url": "/projects" }
+  ],
+  "footer": [
+    { "name": "Sobre nós", "url": "/about" },
+    { "name": "Política de privacidade", "url": "/privacy-policy" },
+    { "name": "Fale conosco", "url": "/contact" },
+    { "name": "Serviços", "url": "/services" },
+    { "name": "Projetos", "url": "/projects" }
+  ]
+}

@@ -2,7 +2,7 @@
 title: "Yaco Acuña"
 description: "this is meta description"
 image: "/images/team/team-2.jpg"
-designation: "Desarrollador"
+designation: "Programador"
 social:
 #  - name: facebook
 #    icon: FaFacebook
