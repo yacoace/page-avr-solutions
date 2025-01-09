@@ -14,36 +14,37 @@ social:
 
   - name: github
     icon: FaGithub
-    link: "#"
+    link: "https://github.com/GreenTeethSkull"
 
   - name: linkedin
     icon: FaLinkedin
-    link: "#"
+    link: "https://www.linkedin.com/in/angel-alfredo-rios-villacis/"
 
 # skill
 skill_title: Skills
 skills:
-  - label: Co-ordination
-    percentage: 85%
+  - label: Ingeniería de Software
+    percentage: 92%
 
-  - label: Programming
+  - label: Ingeniería de Fiabilidad de Sitio (SRE)
     percentage: 79%
 
-  - label: Communication
-    percentage: 95%
+  - label: Inteligencia Artificial
+    percentage: 85%
 ---
 
 #### Work History & Feedback
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis.
+Soy Ingeniero Mecatrónico ubicado en el tercio superior de mi promoción. Poseo experiencia como desarrollador en Power Platform, con enfoque en la integración de aplicaciones de usuario, la automatización de flujos de trabajo y el análisis de datos. He trabajado en la gestión e implementación de software, principalmente utilizando JavaScript, Python y PostgreSQL. Además, cuento con experiencia en la implementación de proyectos de IoT y Visión Artificial, participando en todas las etapas, desde la planificación hasta la entrega de resultados. También me he desempeñado como Ingeniero SRE (Site Reliability Engineer), desarrollando y entregando soluciones tecnológicas de alta disponibilidad para clientes en los sectores de banca y seguros. En este rol, he sido responsable de resolver problemas críticos, gestionar el ciclo de vida completo del software y ejecutar acciones preventivas para minimizar la indisponibilidad de los sistemas en los que he colaborado.
 
 #### Profile Analytics
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+Ingeniero Mecatrónico titulado de la Universidad Nacional de Ingeniería, desarrollador fullstack por el Bootcamp Henry, certificado Dynatrace Associate para observabilidad de software, certificado Azure Developer Associate por Microsoft y especialista en optimización de entornos de alta disponibilidad (SRE). Cuento con experiencia gestionando e implementando proyectos de software, electrónica, Iot y entornos cloud. 
 
 #### Activities
 
-- Enim ad minim veniam, quis nostrud
-- Sed do eiusmod tempor consectetur incididunt ut
-- Excepteur sint occaecat cupidatat non proident sunt in culpayarn install
+- Desarrollo de sistemas integrados con Power Platform y SharePoint
+- Desarrollode Aplicaciones Web con React, Node y PostgreSQL
+- Implementacion de proyectos electronicos, IoT y visión artificial
+- Gestion del frente de SRE en los canales digitales del rubro de la banca y seguros
 
