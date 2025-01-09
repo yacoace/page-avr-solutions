@@ -2,7 +2,7 @@
 title: "Angel Rios"
 description: "this is meta description"
 image: "/images/team/team-3.jpg"
-designation: "Developer"
+designation: "Desarrollador"
 social:
 #  - name: facebook
 #    icon: FaFacebook
@@ -21,7 +21,7 @@ social:
     link: "https://www.linkedin.com/in/angel-alfredo-rios-villacis/"
 
 # skill
-skill_title: Skills
+skill_title: Habilidades
 skills:
   - label: Ingeniería de Software
     percentage: 92%
@@ -33,15 +33,15 @@ skills:
     percentage: 85%
 ---
 
-#### Work History & Feedback
+#### Historial laboral y comentarios
 
 Soy Ingeniero Mecatrónico ubicado en el tercio superior de mi promoción. Poseo experiencia como desarrollador en Power Platform, con enfoque en la integración de aplicaciones de usuario, la automatización de flujos de trabajo y el análisis de datos. He trabajado en la gestión e implementación de software, principalmente utilizando JavaScript, Python y PostgreSQL. Además, cuento con experiencia en la implementación de proyectos de IoT y Visión Artificial, participando en todas las etapas, desde la planificación hasta la entrega de resultados. También me he desempeñado como Ingeniero SRE (Site Reliability Engineer), desarrollando y entregando soluciones tecnológicas de alta disponibilidad para clientes en los sectores de banca y seguros. En este rol, he sido responsable de resolver problemas críticos, gestionar el ciclo de vida completo del software y ejecutar acciones preventivas para minimizar la indisponibilidad de los sistemas en los que he colaborado.
 
-#### Profile Analytics
+#### Análisis de perfil
 
 Ingeniero Mecatrónico titulado de la Universidad Nacional de Ingeniería, desarrollador fullstack por el Bootcamp Henry, certificado Dynatrace Associate para observabilidad de software, certificado Azure Developer Associate por Microsoft y especialista en optimización de entornos de alta disponibilidad (SRE). Cuento con experiencia gestionando e implementando proyectos de software, electrónica, Iot y entornos cloud. 
 
-#### Activities
+#### Actividades
 
 - Desarrollo de sistemas integrados con Power Platform y SharePoint
 - Desarrollode Aplicaciones Web con React, Node y PostgreSQL
