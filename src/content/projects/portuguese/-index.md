@@ -1,10 +1,10 @@
 ---
-subtitle: "Case Studies"
-title: "Case Study"
-description: "this is meta description"
+subtitle: "Estudos de Caso"
+title: "Estudo de Caso"
+description: "esta é uma meta descrição"
 bg_image: "images/backgrounds/page-title.jpg"
 button:
   enable: true
-  label: "more projects"
+  label: "mais projetos"
   link: "/projects"
 ---

@@ -1,36 +1,36 @@
 ---
-title: "DESARROLLO DE APLICACIÓN WEB PARA CONTROL DE OKR'S LEGALES"
+title: "DESENVOLVIMENTO DE APLICAÇÃO WEB PARA CONTROLE DE OKR'S LEGAIS"
 date: 2024-12-15T10:47:55+06:00
-description: "this is meta description"
+description: "esta é uma meta descrição"
 image: "/images/project/project-CANVAS-LEGAL-APP.png"
 client: "CANVAS LEGAL"
-category: "APLICACIÓN WEB, MÓVIL O DE ESCRITORIO"
+category: "APLICAÇÃO WEB, MÓVEL OU DE DESKTOP"
 status: "FINALIZADO"
 ---
 
-Se desarrolló una solución que permita a las áreas legales monitorear y gestionar los objetivos clave y resultados (OKR’s) establecidos según la metodología implementada por Canvas Legal. Esta solución, construida en la plataforma Power Platform de Microsoft, aprovecha herramientas como Power Apps, SharePoint, Power Automate y Power BI, integrando las capacidades de colaboración y automatización ya disponibles en el entorno Microsoft Office 365.
+Foi desenvolvida uma solução que permite às áreas jurídicas monitorar e gerenciar os Objetivos e Resultados Chave (OKR’s) estabelecidos segundo a metodologia implementada pela Canvas Legal. Esta solução, construída na plataforma Power Platform da Microsoft, utiliza ferramentas como Power Apps, SharePoint, Power Automate e Power BI, integrando as capacidades de colaboração e automação já disponíveis no ambiente Microsoft Office 365.
 
-La aplicación está diseñada para ser accesible tanto desde navegadores web como desde dispositivos móviles, ofreciendo una experiencia de usuario fluida y adaptada. Su funcionalidad en tiempo real permite a los usuarios actualizar el estado de las tareas, cambiar descripciones, asignar responsables, agregar comentarios y monitorear el progreso hacia los objetivos establecidos. Además, integra flujos automatizados que envían alertas programadas cuando las tareas están próximas a vencer o cuando se realizan modificaciones, asegurando un seguimiento continuo y efectivo.
+O aplicativo foi projetado para ser acessível tanto por navegadores web quanto por dispositivos móveis, oferecendo uma experiência de usuário fluida e adaptada. Sua funcionalidade em tempo real permite aos usuários atualizar o status das tarefas, alterar descrições, atribuir responsáveis, adicionar comentários e monitorar o progresso em direção aos objetivos estabelecidos. Além disso, integra fluxos automatizados que enviam alertas programados quando as tarefas estão próximas do vencimento ou quando modificações são realizadas, garantindo um acompanhamento contínuo e eficaz.
 
-### Benifits of service
+### Benefícios do serviço
 
-La solución desarrollada aporta múltiples ventajas a las empresas que buscan maximizar la gestión de sus OKR’s legales:
+A solução desenvolvida oferece múltiplas vantagens para empresas que buscam maximizar a gestão de seus OKR’s legais:
 
-1. Monitoreo Efectivo: Seguimiento en tiempo real del progreso hacia objetivos clave, asegurando el cumplimiento dentro de los plazos establecidos.
-2. Acceso Universal: Aplicación accesible desde la web o dispositivos móviles, lo que permite a los usuarios gestionar tareas desde cualquier lugar.
-3. Optimización de Recursos: Aprovechamiento de las herramientas gratuitas incluidas en las licencias de Microsoft Office 365, minimizando costos adicionales.
-4. Automatización de Alertas: Flujos de Power Automate que envían notificaciones automáticas, reduciendo el riesgo de incumplimientos.
-5. Escalabilidad y Seguridad: Uso de SharePoint como base de datos centralizada, garantizando una gestión segura y ampliable.
-6. Colaboración Simplificada: Interfaz intuitiva que facilita la colaboración entre equipos, mejorando la productividad y comunicación interna.
+1. Monitoramento Eficaz: Acompanhamento em tempo real do progresso em direção aos objetivos chave, garantindo o cumprimento dentro dos prazos estabelecidos.
+2. Acesso Universal: Aplicativo acessível pela web ou dispositivos móveis, permitindo que os usuários gerenciem tarefas de qualquer lugar.
+3. Otimização de Recursos: Aproveitamento das ferramentas gratuitas incluídas nas licenças do Microsoft Office 365, minimizando custos adicionais.
+4. Automação de Alertas: Fluxos do Power Automate que enviam notificações automáticas, reduzindo o risco de descumprimentos.
+5. Escalabilidade e Segurança: Uso do SharePoint como base de dados centralizada, garantindo uma gestão segura e escalável.
+6. Colaboração Simplificada: Interface intuitiva que facilita a colaboração entre equipes, melhorando a produtividade e a comunicação interna.
 
-### Business Strategy
+### Estratégia de Negócios
 
-Para garantizar el éxito del proyecto, AVR Solutions implementó una estrategia de negocio enfocada en:
+Para garantir o sucesso do projeto, a AVR Solutions implementou uma estratégia de negócios focada em:
 
-1. Aprovechamiento de Infraestructura Existente
-2. Enfoque en la Experiencia de Usuario
-3. Automatización y Seguimiento
+1. Aproveitamento da Infraestrutura Existente
+2. Foco na Experiência do Usuário
+3. Automação e Acompanhamento
 
-### Analyze your business
+### Analise o seu negócio
 
-El desarrollo de esta aplicación aborda la necesidad crítica de las empresas de gestionar eficazmente sus OKR’s legales, un desafío común debido al desaprovechamiento de herramientas tecnológicas ya incluidas en sus licencias de Microsoft Office 365. Al proporcionar una solución personalizada y automatizada, se optimizan los procesos internos, reduciendo tareas manuales y asegurando un seguimiento continuo del cumplimiento de objetivos. Esto no solo mejora la productividad de las áreas legales, sino que también fortalece la capacidad de las empresas para cumplir sus metas estratégicas dentro de los plazos establecidos, generando un impacto positivo en su desempeño global.
+O desenvolvimento deste aplicativo aborda a necessidade crítica das empresas de gerenciar eficazmente seus OKR’s legais, um desafio comum devido ao subaproveitamento de ferramentas tecnológicas já incluídas nas licenças do Microsoft Office 365. Ao fornecer uma solução personalizada e automatizada, os processos internos são otimizados, reduzindo tarefas manuais e garantindo um acompanhamento contínuo do cumprimento dos objetivos. Isso não apenas melhora a produtividade das áreas jurídicas, mas também fortalece a capacidade das empresas de alcançar suas metas estratégicas dentro dos prazos estabelecidos, gerando um impacto positivo no seu desempenho global.

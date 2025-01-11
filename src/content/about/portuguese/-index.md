@@ -1,38 +1,38 @@
 ---
-title: "Sobre nosotros"
-meta_title: "Sobre nosotros"
-description: "this is meta description"
+title: "Sobre nós"
+meta_title: "Sobre nós"
+description: "esta é uma meta descrição"
 image: ""
 draft: false
 
 philosophy_section:
   enable: true
   items:
-    - title: "Nuestra misión"
-      content: "Digitalizar y optimizar los negocios a través de tecnologías avanzadas, mejorando la eficiencia operativa e impulsando el crecimiento sostenible para nuestros clientes."
+    - title: "Nossa missão"
+      content: "Digitalizar e otimizar os negócios por meio de tecnologias avançadas, melhorando a eficiência operacional e impulsionando o crescimento sustentável para nossos clientes."
       list:
-        - "Servicios de calidad"
-        - "Satisfacción del cliente"
-    - title: "NUESTRO ENFOQUE"
-      content: "Escuchamos, entendemos y diseñamos soluciones a medida que integran innovación y practicidad, asegurando una transformación digital efectiva para cada negocio."
+        - "Serviços de qualidade"
+        - "Satisfação do cliente"
+    - title: "NOSSA ABORDAGEM"
+      content: "Escutamos, entendemos e projetamos soluções sob medida que integram inovação e praticidade, garantindo uma transformação digital eficaz para cada negócio."
       list:
-        - "Servicios de calidad"
-        - "Satisfacción del cliente"
-    - title: "NUESTRA FILOSOFÍA"
-      content: "Creemos en la tecnología como herramienta para el progreso. Con pasión, ética y dedicación, buscamos crear un impacto positivo en cada proyecto."
+        - "Serviços de qualidade"
+        - "Satisfação do cliente"
+    - title: "NOSSA FILOSOFIA"
+      content: "Acreditamos na tecnologia como uma ferramenta para o progresso. Com paixão, ética e dedicação, buscamos criar um impacto positivo em cada projeto."
       list:
-        - "Servicios de calidad"
-        - "Satisfacción del cliente"
+        - "Serviços de qualidade"
+        - "Satisfação do cliente"
 
 about_section:
   enable: true
-  subtitle: "Sobre Nosotros"
-  title: "Innovación que Transforma"
-  content: "AVR combina tecnología avanzada y experiencia para ofrecer soluciones a medida en automatización, software, IoT y control industrial. Estamos comprometidos a ser socios estratégicos en la digitalización y modernización de su negocio."
+  subtitle: "Sobre Nós"
+  title: "Inovação que Transforma"
+  content: "AVR combina tecnologia avançada e experiência para oferecer soluções sob medida em automação, software, IoT e controle industrial. Estamos comprometidos em ser parceiros estratégicos na digitalização e modernização do seu negócio."
   bg_image: "/images/backgrounds/about-us-bg.png"
   image: "/images/about/about-us.png"
   button:
     enable: true
-    label: "más servicios"
-    link: "/servicios"
+    label: "mais serviços"
+    link: "/servicos"
 ---
