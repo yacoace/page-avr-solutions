@@ -21,7 +21,7 @@ social:
     link: "https://www.linkedin.com/in/yacoace/"
 
 # skill
-skill_title: Skills
+skill_title: Habilidades
 skills:
   - label: Gestión de Proyectos (SCRUM, PMBOK, WCS)
     percentage: 90%
@@ -33,15 +33,15 @@ skills:
     percentage: 85%
 ---
 
-#### Work History & Feedback
+#### Historial laboral y comentarios
 
 Con más de 3 años de experiencia, he trabajado como Coordinador de Laboratorio, gestionando proyectos de automatización y transformación digital desde la etapa inicial hasta su despliegue, asegurando la integración efectiva de tecnologías innovadoras. Mi experiencia como Analista de Procesos incluye la ejecución de proyectos de desarrollo de software enfocados en aplicaciones móviles, de escritorio y web, adaptadas a las necesidades específicas de cada cliente. Además, como Desarrollador en Power Platform, he implementado soluciones empresariales integradas con entornos de Microsoft 365, optimizando procesos en compañías de sectores diversos como minería, legal, laboratorios y retail, contribuyendo significativamente a la transformación digital y mejora continua de las organizaciones. 
 
-#### Profile Analytics
+#### Análisis de perfil
 
 Ingeniero Mecatrónico por la Universidad Nacional de Ingeniería, especialista en Instrumentación y Control Industrial por TECSUP, y miembro de la International Society of Automation (ISA). Cuento con más de 3 años de experiencia como Coordinador de Laboratorio, Analista de Procesos, Desarrollador Power Platform y Especialista en Microsoft 365, liderando la automatización de procesos empresariales mediante proyectos de desarrollo de software y hardware.
 
-#### Activities
+#### Actividades
 
 - Gestión integral de proyectos de automatización y transformación digital
 - Desarrollo de soluciones tecnológicas personalizadas programando aplicaciones móviles, de escritorio y web
