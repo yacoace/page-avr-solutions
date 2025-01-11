@@ -4,43 +4,43 @@ hero_slider:
   enable: true
   slider_item:
     # slider item
-    - subtitle: "Optimiza, automatiza y acelera tus procesos internos."
-      title: "Automatización de Procesos Empresariales"
-      content: "Aprovecha las herramientas de Microsoft Power Platform: Power Apps, Power BI, Power Automate y Power Pages para digitalizar y automatizar tu negocio. Implementa soluciones móviles, web y dashboards de Business Intelligence en menos tiempo y con gran flexibilidad."
+    - subtitle: "Otimize, automatize e acelere seus processos internos."
+      title: "Automatização de Processos Empresariais"
+      content: "Aproveite as ferramentas da Microsoft Power Platform: Power Apps, Power BI, Power Automate e Power Pages para digitalizar e automatizar seu negócio. Implemente soluções móveis, web e dashboards de Business Intelligence em menos tempo e com grande flexibilidade."
       bg_image: "/images/slider/banner-1.jpg"
       button:
         enable: true
-        label: "more details"
+        label: "mais detalhes"
         link: "/about"
 
     # slider item
-    - subtitle: "Soluciones únicas para necesidades únicas."
-      title: "Desarrollo de Software a Medida"
-      content: "Creamos aplicaciones personalizadas desde cero, utilizando tecnologías avanzadas como Python, frameworks web, RPA's y algoritmos de Machine Learning. Nos adaptamos a tus requerimientos específicos para brindarte software robusto y escalable."
+    - subtitle: "Soluções únicas para necessidades únicas."
+      title: "Desenvolvimento de Software Sob Medida"
+      content: "Criamos aplicativos personalizados do zero, utilizando tecnologias avançadas como Python, frameworks web, RPA's e algoritmos de Machine Learning. Adaptamo-nos aos seus requisitos específicos para oferecer software robusto e escalável."
       bg_image: "/images/slider/banner-2.jpg"
       button:
         enable: true
-        label: "more details"
+        label: "mais detalhes"
         link: "/about"
 
     # slider item
-    - subtitle: "Conecta y transforma tu entorno."
-      title: "Internet de las cosas (IoT)"
-      content: "Ofrecemos soluciones integrales de IoT, desde la implementación de sensores inteligentes hasta el diseño de redes de dispositivos conectados. Moderniza tu infraestructura y obtén datos en tiempo real para mejorar la toma de decisiones."
+    - subtitle: "Conecte e transforme seu ambiente."
+      title: "Internet das Coisas (IoT)"
+      content: "Oferecemos soluções integrais de IoT, desde a implementação de sensores inteligentes até o design de redes de dispositivos conectados. Modernize sua infraestrutura e obtenha dados em tempo real para melhorar a tomada de decisões."
       bg_image: "/images/slider/banner-3.jpg"
       button:
         enable: true
-        label: "more details"
+        label: "mais detalhes"
         link: "/about"
 
     # slider item
-    - subtitle: "Integra tecnología avanzada en tus procesos industriales."
-      title: "Automatización Industrial"
-      content: "Programamos PLCs para optimizar tus procesos, desarrollamos sistemas SCADA para supervisión en tiempo real y ofrecemos soluciones avanzadas de control de procesos."
+    - subtitle: "Integre tecnologia avançada aos seus processos industriais."
+      title: "Automação Industrial"
+      content: "Programamos PLCs para otimizar seus processos, desenvolvemos sistemas SCADA para supervisão em tempo real e oferecemos soluções avançadas de controle de processos."
       bg_image: "/images/slider/banner-4.jpg"
       button:
         enable: true
-        label: "more details"
+        label: "mais detalhes"
         link: "/about"
 
 ########### banner feature #####
@@ -49,71 +49,71 @@ banner_feature:
   # Max use 4 item
   feature_item:
     # banner feature item loop
-    - name: "Innovación Tecnológica"
+    - name: "Inovação Tecnológica"
       icon: "FaGem"
-      content: "Incorporamos tecnologías avanzadas para transformar digitalmente tu empresa."
+      content: "Incorporamos tecnologias avançadas para transformar digitalmente sua empresa."
 
     # banner feature item loop
-    - name: "Adaptabilidad"
+    - name: "Adaptabilidade"
       icon: "FaChartBar"
-      content: "Ofrecemos soluciones personalizadas que se ajustan a las necesidades únicas de cada negocio."
+      content: "Oferecemos soluções personalizadas que se ajustam às necessidades únicas de cada negócio."
 
     # banner feature item loop
-    - name: "Eficiencia Operativa"
+    - name: "Eficiência Operacional"
       icon: "FaLightbulb"
-      content: "Optimizamos procesos, mejorando productividad y reduciendo costos mediante automatización inteligente."
+      content: "Otimizamos processos, melhorando a produtividade e reduzindo custos por meio de automação inteligente."
 
     # banner feature item loop
-    - name: "Compromiso con la Calidad"
+    - name: "Compromisso com a Qualidade"
       icon: "FaGear"
-      content: "Entregamos soluciones confiables y escalables, garantizando altos estándares de calidad."
+      content: "Entregamos soluções confiáveis e escaláveis, garantindo altos padrões de qualidade."
 
 ######### funfacts ########
 ###funfacts:
 ###  enable: true
 ###  funfacts_item:
     # fanfacts item loop
-###    - name: "project done"
+###    - name: "projetos realizados"
 ###      count: "50"
 ###      icon: "FaBullseye"
 
     # fanfacts item loop
-###    - name: "Years Experience"
+###    - name: "Anos de Experiência"
 ###      count: "25"
 ###      icon: "FaCalendarDays"
 
     # fanfacts item loop
-###    - name: "Awards Win"
+###    - name: "Prêmios Recebidos"
 ###      count: "250"
 ###      icon: "FaAward"
 
     # fanfacts item loop
-###    - name: "Happy Coustomers"
+###    - name: "Clientes Satisfeitos"
 ###      count: "500"
 ###      icon: "FaRegFaceSmile"
 
 ########## feature ##########
 feature:
   enable: true
-  subtitle: "¿Por qué elegirnos?"
-  title: "Por qué eligen AVR"
+  subtitle: "Por que nos escolher?"
+  title: "Por que escolher a AVR"
   image: "/images/feature/feature.png"
-  content: "Nos destacamos por nuestra flexibilidad y trato personalizado con cada cliente."
+  content: "Destacamo-nos por nossa flexibilidade e atendimento personalizado a cada cliente."
   feature_item:
     # feature item loop
-    - name: "Experiencia comprobada"
+    - name: "Experiência Comprovada"
       icon: FaSnowflake
-      content: "Nuestro equipo de expertos en tecnologías avanzadas garantiza soluciones confiables, escalables y adaptadas a sus necesidades."
+      content: "Nossa equipe de especialistas em tecnologias avançadas garante soluções confiáveis, escaláveis e adaptadas às suas necessidades."
 
     # feature item loop
-    - name: " Energía innovadora"
+    - name: "Energia Inovadora"
       icon: FaCode
-      content: "Somos una empresa joven y dinámica, que aporta ideas frescas y creativas para abordar los desafíos tecnológicos actuales y futuros."
+      content: "Somos uma empresa jovem e dinâmica, que traz ideias frescas e criativas para enfrentar os desafios tecnológicos atuais e futuros."
 
 ######## blog #######
 latest_news:
   enable: true
   show_item: 3
-  title: "Aprenda de AVR"
-  sub_title: "Últimas noticias"
+  title: "Aprenda com a AVR"
+  sub_title: "Últimas notícias"
 ---

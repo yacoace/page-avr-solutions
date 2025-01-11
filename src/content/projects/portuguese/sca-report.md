@@ -1,34 +1,34 @@
 ---
 title: "SCA REPORT"
 date: 2019-02-07T10:47:55+06:00
-description: "this is meta description"
+description: "esta é uma meta descrição"
 image: "/images/project/project-SCA-REPORT.png"
 client: "ASTAY SYSTEMS"
-category: "APLICACIÓN WEB, MÓVIL O DE ESCRITORIO"
+category: "APLICAÇÃO WEB, MÓVEL OU DESKTOP"
 status: "FINALIZADO"
 ---
 
-AVR Solutions desarrolló para Astay Systems una Aplicación Integrada en Power BI llamada SCA Report (Stability Capability Assessment Report). Esta solución fue diseñada para que gerentes y colaboradores puedan agregar, editar, auditar o aprobar comentarios en tiempo real directamente desde el informe de Power BI. Este dashboard mostraba datos clave sobre las operaciones internas de todo un proceso minero, como extracción de toneladas, acarreo y flota, permitiendo la toma de decisiones informadas sobre la estabilidad del rendimiento. La aplicación fue creada con Power Platform, lo que permitió integrarla perfectamente dentro del informe de Power BI, eliminando la necesidad de pantallas adicionales o vínculos externos. Esta solución se adaptó a 7 casos de uso específicos definidos por Astay Systems, garantizando flexibilidad y funcionalidad personalizada para cada escenario.
+A AVR Solutions desenvolveu para a Astay Systems uma Aplicação Integrada no Power BI chamada SCA Report (Stability Capability Assessment Report). Esta solução foi projetada para que gerentes e colaboradores possam adicionar, editar, auditar ou aprovar comentários em tempo real diretamente no relatório do Power BI. Este dashboard exibe dados-chave sobre as operações internas de todo um processo de mineração, como extração de toneladas, transporte e frota, permitindo decisões informadas sobre a estabilidade do desempenho. A aplicação foi criada utilizando a Power Platform, o que permitiu integrá-la perfeitamente ao relatório do Power BI, eliminando a necessidade de telas adicionais ou links externos. A solução foi adaptada para 7 casos de uso específicos definidos pela Astay Systems, garantindo flexibilidade e funcionalidade personalizada para cada cenário.
 
-### Benifits of service
+### Benefícios do serviço
 
-El desarrollo de esta aplicación aporta los siguientes beneficios clave:
+O desenvolvimento desta aplicação oferece os seguintes benefícios principais:
 
-1. Integración Directa: Permite interactuar con el informe de Power BI en tiempo real, sin necesidad de salir de la plataforma.
-2. Gestión Personalizada: Niveles de acceso diferenciados para agregar, editar, auditar o aprobar comentarios según el tipo de usuario.
-3. Flexibilidad en el Diseño: Personalización para 7 casos de uso, adaptándose a diversas pantallas y tipos de datos específicos.
-4. Toma de Decisiones Informadas: Comentarios en tiempo real vinculados directamente con métricas clave de rendimiento minero.
-5. Optimización de Flujos de Trabajo: Eliminación de procesos manuales y externos, centralizando la gestión de comentarios en una única plataforma.
-6. Escalabilidad y Seguridad: Uso de Power Platform y Power BI garantiza una solución confiable y adaptable para futuros requerimientos.
+1. **Integração Direta:** Permite interação em tempo real com o relatório do Power BI sem sair da plataforma.  
+2. **Gestão Personalizada:** Níveis de acesso diferenciados para adicionar, editar, auditar ou aprovar comentários conforme o tipo de usuário.  
+3. **Flexibilidade no Design:** Personalização para 7 casos de uso, adaptando-se a diferentes telas e tipos de dados específicos.  
+4. **Decisões Informadas:** Comentários em tempo real vinculados diretamente a métricas-chave de desempenho no setor de mineração.  
+5. **Otimização de Fluxos de Trabalho:** Eliminação de processos manuais e externos, centralizando a gestão de comentários em uma única plataforma.  
+6. **Escalabilidade e Segurança:** Uso da Power Platform e do Power BI garante uma solução confiável e adaptável para futuros requisitos.  
 
-### Business Strategy
+### Estratégia de Negócios
 
-Para lograr el éxito del proyecto, AVR Solutions implementó las siguientes estrategias:
+Para garantir o sucesso do projeto, a AVR Solutions implementou as seguintes estratégias:
 
-1. Adaptabilidad a Requerimientos del Cliente
-2. Innovación Tecnológica
-3. Enfoque en la Experiencia del Usuario
+1. **Adaptabilidade às Necessidades do Cliente**  
+2. **Inovação Tecnológica**  
+3. **Foco na Experiência do Usuário**  
 
-### Analyze your business
+### Analise o seu negócio
 
-El proyecto resolvió una necesidad clave de Astay Systems: permitir la gestión centralizada de comentarios en tiempo real dentro de un informe de Power BI, eliminando procesos manuales y mejorando la capacidad de análisis y decisión. Al integrar datos operativos críticos de minería con una funcionalidad dinámica de comentarios, la aplicación ofreció una solución completa y personalizada que fortaleció la calidad del servicio ofrecido a su cliente minero.
+O projeto resolveu uma necessidade crucial da Astay Systems: permitir a gestão centralizada de comentários em tempo real dentro de um relatório do Power BI, eliminando processos manuais e aprimorando a capacidade de análise e tomada de decisão. Ao integrar dados operacionais críticos de mineração com uma funcionalidade dinâmica de comentários, a aplicação ofereceu uma solução completa e personalizada, fortalecendo a qualidade do serviço fornecido ao cliente no setor de mineração.
