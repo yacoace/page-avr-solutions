@@ -20,7 +20,7 @@ const filteredSupportedLang = supportedLang.filter(
 
 // https://astro.build/config
 export default defineConfig({
-  site: config.site.base_url ? config.site.base_url : "http://yacoace.github.io",
+  site: config.site.base_url ? config.site.base_url : "http://avrsolutions.dev",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "ignore",
   i18n: {

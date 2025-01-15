@@ -1,0 +1,1 @@
+const e=[{languageName:"En",languageCode:"en",contentDir:"english",weight:1},{languageName:"Es",languageCode:"es",contentDir:"spanish",weight:2},{languageName:"Pr",languageCode:"pr",contentDir:"portuguese",weight:3}];export{e as l};
