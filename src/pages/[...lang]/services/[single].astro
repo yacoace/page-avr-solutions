@@ -127,7 +127,7 @@ const {
           <!-- quick contact -->
           <div class="bg-white px-8 py-10 box-shadow mb-12 sticky top-28">
             <h5 class="mb-5">{quick_contact}</h5>
-            <form action={contact_form_action}>
+            <form id="contact-form">
               <input
                 type="text"
                 name="name"
@@ -137,7 +137,7 @@ const {
               />
               <input
                 type="email"
-                name="mail"
+                name="email"
                 id="mail"
                 class="form-control form-control-sm w-full border-0 rounded-0 box-shadow mb-3"
                 placeholder={placeholder_email}
@@ -183,4 +183,49 @@ const {
       </div>
     </div>
   </section>
+
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+
+  <script 
+  define:vars={{
+    send_message,
+  }}
+  is:inline
+>
+
+  // emailjs.init('8rtkiGOe8sWOc9CHN');
+  emailjs.init({
+        publicKey: "8rtkiGOe8sWOc9CHN",
+      });
+
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const submitButton = this.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando...';
+    
+    emailjs.sendForm('service_wrzj5pc', 'template_vj02dy9', this)
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('¡Mensaje enviado exitosamente!');
+          this.reset();
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          alert('No se pudo enviar el mensaje. Por favor, intenta nuevamente.');
+        }
+      )
+      .finally(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = send_message;
+      });
+  });
+</script>
+
 </Base>
