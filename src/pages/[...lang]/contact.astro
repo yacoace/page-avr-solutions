@@ -97,7 +97,7 @@ const {
 
         <div class="col-10 sm:col-8 md:col-7">
           <h2 class="section-title">{contact_form}</h2>
-          <form action={contact_form_action} class="row">
+          <form id="contact-form" class="row">
             <div class="md:col-6">
               <input
                 type="text"
@@ -105,15 +105,17 @@ const {
                 id="name"
                 class="form-control border-0 rounded-none box-shadow mb-5"
                 placeholder={placeholder_name}
+                required
               />
             </div>
             <div class="md:col-6">
               <input
                 type="email"
-                name="mail"
+                name="email"
                 id="mail"
                 class="form-control border-0 rounded-none box-shadow mb-5"
                 placeholder={placeholder_email}
+                required
               />
             </div>
             <div class="md:col-6">
@@ -139,14 +141,11 @@ const {
                 name="message"
                 id="message"
                 class="form-control border-0 rounded-none box-shadow mb-12 py-3 px-4"
-                placeholder={placeholder_message}></textarea>
+                placeholder={placeholder_message}
+                required></textarea>
             </div>
             <div class="col-12">
-              <button
-                type="submit"
-                value="send"
-                class="btn btn-primary hover-ripple"
-              >
+              <button type="submit" class="btn btn-primary hover-ripple">
                 {send_message}
               </button>
             </div>
@@ -156,4 +155,58 @@ const {
     </div>
   </section>
   <!-- /contact form and map -->
+
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+
+  <!-- <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "8rtkiGOe8sWOc9CHN",
+      });
+    })();
+  </script> -->
+
+  <script 
+  define:vars={{
+    send_message,
+  }}
+  is:inline
+>
+  // emailjs.init('8rtkiGOe8sWOc9CHN');
+  emailjs.init({
+        publicKey: "8rtkiGOe8sWOc9CHN",
+      });
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const submitButton = this.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando...';
+
+    // Usa emailjs.sendForm
+    emailjs.sendForm('service_wrzj5pc', 'template_vj02dy9', this)
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('¡Mensaje enviado exitosamente!');
+          this.reset();
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          alert('No se pudo enviar el mensaje. Por favor, intenta nuevamente.');
+        }
+      )
+      .finally(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = send_message;
+      });
+  });
+</script>
+
+  
+
 </Base>

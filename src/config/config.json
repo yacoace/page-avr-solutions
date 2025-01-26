@@ -18,7 +18,7 @@
     "default_theme": "system",
     "pagination": 4,
     "blog_folder": "blog",
-    "default_language": "en",
+    "default_language": "es",
     "disable_languages": [],
     "default_language_in_subdir": false,
     "top_header": true
@@ -30,7 +30,7 @@
     "phone": "+51 991 544 309",
     "email": "admin@avrdev.onmicrosoft.com",
     "footer_content": "At AVR, we transform ideas into innovative technological solutions. We specialize in business process automation, custom software development, IoT solutions, and industrial automation, tailoring our services to each client’s unique needs. Our team of experts is committed to excellence, delivering scalable and reliable solutions that boost productivity and reduce costs.",
-    "copyright": "&copy; Designed And Developed by [Themefisher](https://themefisher.com/)",
+    "copyright": "&copy; Designed And Developed by AVR SOLUTIONS SAC",
     "copyright_menu": {
       "enable": true,
       "menu_items": [
