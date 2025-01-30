@@ -127,7 +127,7 @@ const {
           <!-- quick contact -->
           <div class="bg-white px-8 py-10 box-shadow mb-12 sticky top-28">
             <h5 class="mb-5">{quick_contact}</h5>
-            <form id="contact-form">
+            <form id="contact-form-2">
               <input
                 type="text"
                 name="name"
@@ -184,46 +184,78 @@ const {
     </div>
   </section>
 
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-  ></script>
 
-  <script 
+<script 
   define:vars={{
     send_message,
   }}
   is:inline
 >
+  function loadEmailJSScript() {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = './../../../public/scripts/emailjs.min.js'; 
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+  }
 
-  // emailjs.init('8rtkiGOe8sWOc9CHN');
-  emailjs.init({
+  function initializeEmailJS() {
+    if (typeof emailjs !== 'undefined') {
+
+      emailjs.init({
         publicKey: "8rtkiGOe8sWOc9CHN",
       });
 
+      const form = document.getElementById('contact-form-2');
+      if (form) {
+        form.addEventListener('submit', function(event) {
+          event.preventDefault(); 
 
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); 
+          const submitButton = this.querySelector('button[type="submit"]');
+          submitButton.disabled = true;
+          submitButton.textContent = 'Enviando...';
 
-    const submitButton = this.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-    submitButton.textContent = 'Enviando...';
-    
-    emailjs.sendForm('service_wrzj5pc', 'template_vj02dy9', this)
-      .then(
-        (response) => {
-          console.log('SUCCESS!', response.status, response.text);
-          alert('¡Mensaje enviado exitosamente!');
-          this.reset();
-        },
-        (error) => {
-          console.error('FAILED...', error);
-          alert('No se pudo enviar el mensaje. Por favor, intenta nuevamente.');
-        }
-      )
-      .finally(() => {
-        submitButton.disabled = false;
-        submitButton.textContent = send_message;
+          // Usa emailjs.sendForm
+          emailjs.sendForm('service_wrzj5pc', 'template_vj02dy9', this)
+            .then(
+              (response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('¡Mensaje enviado exitosamente!');
+                this.reset();
+              },
+              (error) => {
+                console.error('FAILED...', error);
+                alert('No se pudo enviar el mensaje. Por favor, intenta nuevamente.');
+              }
+            )
+            .finally(() => {
+              submitButton.disabled = false;
+              submitButton.textContent = send_message;
+            });
+        });
+      }
+    } else {
+      console.error('EmailJS no está cargado correctamente.');
+    }
+  }
+
+  loadEmailJSScript()
+    .then(() => {
+      initializeEmailJS();
+    })
+    .catch(() => {
+      console.error('No se pudo cargar el script de EmailJS.');
+    });
+
+  window.addEventListener('astro:after-swap', () => {
+    loadEmailJSScript()
+      .then(() => {
+        initializeEmailJS();
+      })
+      .catch(() => {
+        console.error('No se pudo cargar el script de EmailJS después de la navegación.');
       });
   });
 </script>
