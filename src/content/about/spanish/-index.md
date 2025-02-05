@@ -30,7 +30,7 @@ about_section:
   title: "Innovación que Transforma"
   content: "AVR combina tecnología avanzada y experiencia para ofrecer soluciones a medida en automatización, software, IoT y control industrial. Estamos comprometidos a ser socios estratégicos en la digitalización y modernización de su negocio."
   bg_image: "/images/backgrounds/about-us-bg.png"
-  image: "/images/about/about-us.png"
+  image: "/images/about/ABOUT_US_AVR.jpg"
   button:
     enable: true
     label: "más servicios"

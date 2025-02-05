@@ -1,9 +1,9 @@
 ---
 title: "SCA REPORT"
-date: 2019-02-07T10:47:55+06:00
+date: 2024-02-07T10:47:55+06:00
 description: "this is meta description"
 image: "/images/project/project-SCA-REPORT.png"
-client: "ASTAY SYSTEMS"
+client: "Minas"
 category: "APLICACIÓN WEB, MÓVIL O DE ESCRITORIO"
 status: "FINALIZADO"
 ---

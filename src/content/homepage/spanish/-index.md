@@ -7,40 +7,40 @@ hero_slider:
     - subtitle: "Optimiza, automatiza y acelera tus procesos internos."
       title: "Automatización de Procesos Empresariales"
       content: "Aprovecha las herramientas de Microsoft Power Platform: Power Apps, Power BI, Power Automate y Power Pages para digitalizar y automatizar tu negocio. Implementa soluciones móviles, web y dashboards de Business Intelligence en menos tiempo y con gran flexibilidad."
-      bg_image: "/images/slider/banner-1.jpg"
+      bg_image: "/images/slider/BPA_AVR_FINAL.png"
       button:
         enable: true
-        label: "more details"
+        label: "más detalles"
         link: "/about"
 
     # slider item
     - subtitle: "Soluciones únicas para necesidades únicas."
       title: "Desarrollo de Software a Medida"
       content: "Creamos aplicaciones personalizadas desde cero, utilizando tecnologías avanzadas como Python, frameworks web, RPA's y algoritmos de Machine Learning. Nos adaptamos a tus requerimientos específicos para brindarte software robusto y escalable."
-      bg_image: "/images/slider/banner-2.jpg"
+      bg_image: "/images/slider/AVR_DEV.png"
       button:
         enable: true
-        label: "more details"
+        label: "más detalles"
         link: "/about"
 
     # slider item
     - subtitle: "Conecta y transforma tu entorno."
       title: "Internet de las cosas (IoT)"
       content: "Ofrecemos soluciones integrales de IoT, desde la implementación de sensores inteligentes hasta el diseño de redes de dispositivos conectados. Moderniza tu infraestructura y obtén datos en tiempo real para mejorar la toma de decisiones."
-      bg_image: "/images/slider/banner-3.jpg"
+      bg_image: "/images/slider/IOT_AVR.png"
       button:
         enable: true
-        label: "more details"
+        label: "más detalles"
         link: "/about"
 
     # slider item
     - subtitle: "Integra tecnología avanzada en tus procesos industriales."
       title: "Automatización Industrial"
       content: "Programamos PLCs para optimizar tus procesos, desarrollamos sistemas SCADA para supervisión en tiempo real y ofrecemos soluciones avanzadas de control de procesos."
-      bg_image: "/images/slider/banner-4.jpg"
+      bg_image: "/images/slider/AUT_IND_AVR.jpg"
       button:
         enable: true
-        label: "more details"
+        label: "más detalles"
         link: "/about"
 
 ########### banner feature #####
@@ -97,7 +97,7 @@ feature:
   enable: true
   subtitle: "¿Por qué elegirnos?"
   title: "Por qué eligen AVR"
-  image: "/images/feature/feature.png"
+  image: "/images/feature/WHY.jpg"
   content: "Nos destacamos por nuestra flexibilidad y trato personalizado con cada cliente."
   feature_item:
     # feature item loop
