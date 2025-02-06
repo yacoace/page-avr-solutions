@@ -8,7 +8,7 @@ category: "Web, Mobile, or Desktop Application"
 status: "Completed"
 ---
 
-AVR Solutions developed an integrated Power BI Application called SCA Report (Stability Capability Assessment Report) for Astay Systems. This solution was designed to enable managers and collaborators to add, edit, audit, or approve comments in real-time directly from the Power BI report. This dashboard displayed key data about the internal operations of an entire mining process, such as tonnage extraction, hauling, and fleet management, allowing informed decisions on performance stability. The application was built using Power Platform, enabling seamless integration within the Power BI report, eliminating the need for additional screens or external links. This solution was tailored to 7 specific use cases defined by Astay Systems, ensuring flexibility and customized functionality for each scenario.
+AVR Solutions developed an integrated Power BI Application called SCA Report (Stability Capability Assessment Report). This solution was designed to enable managers and collaborators to add, edit, audit, or approve comments in real-time directly from the Power BI report. This dashboard displayed key data about the internal operations of an entire mining process, such as tonnage extraction, hauling, and fleet management, allowing informed decisions on performance stability. The application was built using Power Platform, enabling seamless integration within the Power BI report, eliminating the need for additional screens or external links. This solution was tailored to 7 specific use cases, ensuring flexibility and customized functionality for each scenario.
 
 ### Benefits of the Service
 
@@ -31,4 +31,4 @@ To ensure the project's success, AVR Solutions implemented the following strateg
 
 ### Analyze Your Business
 
-The project addressed a critical need for Astay Systems: enabling centralized, real-time comment management within a Power BI report, eliminating manual processes and enhancing analysis and decision-making capabilities. By integrating critical mining operational data with dynamic comment functionality, the application delivered a comprehensive and tailored solution that strengthened the quality of service provided to its mining client.
+The project addressed a critical need: enabling centralized, real-time comment management within a Power BI report, eliminating manual processes and enhancing analysis and decision-making capabilities. By integrating critical mining operational data with dynamic comment functionality, the application delivered a comprehensive and tailored solution that strengthened the quality of service provided to its mining client.

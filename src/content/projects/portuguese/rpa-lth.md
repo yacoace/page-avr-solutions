@@ -1,10 +1,10 @@
 ---
 title: "RPA LAKE TITICACA HOTEL"
-date: 2019-02-07T10:47:55+06:00
+date: 2024-10-30T10:47:55+06:00
 description: "esta é uma meta descrição"
-image: "/images/project/project-RPA-LTH.png"
+image: "/images/project/project_RPA-LTH-5.png"
 client: "CONSORCIO CAROLINA"
-category: "AUTOMAÇÃO DE PROCESSOS"
+category: "DESENVOLVIMENTO DE SOFTWARE"
 status: "FINALIZADO"
 ---
 

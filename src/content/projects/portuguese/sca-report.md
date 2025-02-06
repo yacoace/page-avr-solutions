@@ -1,14 +1,14 @@
 ---
 title: "SCA REPORT"
-date: 2019-02-07T10:47:55+06:00
+date: 2024-07-31T10:47:55+06:00
 description: "esta é uma meta descrição"
-image: "/images/project/project-SCA-REPORT.png"
-client: "ASTAY SYSTEMS"
+image: "/images/project/project_SCA-REPOR-4.png"
+client: "-----"
 category: "APLICAÇÃO WEB, MÓVEL OU DESKTOP"
 status: "FINALIZADO"
 ---
 
-A AVR Solutions desenvolveu para a Astay Systems uma Aplicação Integrada no Power BI chamada SCA Report (Stability Capability Assessment Report). Esta solução foi projetada para que gerentes e colaboradores possam adicionar, editar, auditar ou aprovar comentários em tempo real diretamente no relatório do Power BI. Este dashboard exibe dados-chave sobre as operações internas de todo um processo de mineração, como extração de toneladas, transporte e frota, permitindo decisões informadas sobre a estabilidade do desempenho. A aplicação foi criada utilizando a Power Platform, o que permitiu integrá-la perfeitamente ao relatório do Power BI, eliminando a necessidade de telas adicionais ou links externos. A solução foi adaptada para 7 casos de uso específicos definidos pela Astay Systems, garantindo flexibilidade e funcionalidade personalizada para cada cenário.
+A AVR Solutions desenvolveu uma Aplicação Integrada no Power BI chamada SCA Report (Stability Capability Assessment Report). Esta solução foi projetada para que gerentes e colaboradores possam adicionar, editar, auditar ou aprovar comentários em tempo real diretamente no relatório do Power BI. Este dashboard exibe dados-chave sobre as operações internas de todo um processo de mineração, como extração de toneladas, transporte e frota, permitindo decisões informadas sobre a estabilidade do desempenho. A aplicação foi criada utilizando a Power Platform, o que permitiu integrá-la perfeitamente ao relatório do Power BI, eliminando a necessidade de telas adicionais ou links externos. A solução foi adaptada para 7 casos de uso específicos, garantindo flexibilidade e funcionalidade personalizada para cada cenário.
 
 ### Benefícios do serviço
 
