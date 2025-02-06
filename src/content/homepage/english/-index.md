@@ -7,7 +7,7 @@ hero_slider:
     - subtitle: "Optimize, automate and accelerate your internal processes"
       title: "Business Process Automation"
       content: "Take advantage of Microsoft Power Platform tools: Power Apps, Power BI, Power Automate and Power Pages to digitize and automate your business. Implement mobile, web and Business Intelligence dashboard solutions in less time and with great flexibility."
-      bg_image: "/images/slider/banner-1.jpg"
+      bg_image: "/images/slider/BPA_AVR_FINAL.png"
       button:
         enable: true
         label: "more details"
@@ -17,7 +17,7 @@ hero_slider:
     - subtitle: "Unique solutions for unique needs"
       title: "Custom Software Development"
       content: "We create custom applications from scratch, using advanced technologies like Python, web frameworks, RPA's and Machine Learning algorithms. We adapt to your specific requirements to provide you with robust and scalable software."
-      bg_image: "/images/slider/banner-2.jpg"
+      bg_image: "/images/slider/AVR_DEV.png"
       button:
         enable: true
         label: "more details"
@@ -27,7 +27,7 @@ hero_slider:
     - subtitle: "Connect and transform your environment"
       title: "Internet of Things (IoT)"
       content: "We offer comprehensive IoT solutions, from the implementation of smart sensors to the design of networks of connected devices. Modernize your infrastructure and obtain real-time data to improve decision making."
-      bg_image: "/images/slider/banner-3.jpg"
+      bg_image: "/images/slider/IOT_AVR.png"
       button:
         enable: true
         label: "more details"
@@ -37,7 +37,7 @@ hero_slider:
     - subtitle: "Integrate advanced technology into your industrial processes"
       title: "Industrial Automation"
       content: "We program PLCs to optimize your processes, develop SCADA systems for real-time monitoring and offer advanced process control solutions."
-      bg_image: "/images/slider/banner-4.jpg"
+      bg_image: "/images/slider/AUT_IND_AVR.jpg"
       button:
         enable: true
         label: "more details"
@@ -98,7 +98,7 @@ feature:
   enable: true
   subtitle: "Why Choose Us"
   title: "Why They Choose AVR"
-  image: "/images/feature/feature.png"
+  image: "/images/feature/WHY.jpg"
   content: "We stand out for our flexibility and personalized approach to each client."
   feature_item:
     # feature item loop

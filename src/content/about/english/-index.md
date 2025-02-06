@@ -30,7 +30,7 @@ about_section:
   title: "Innovation that Transforms"
   content: "AVR combines advanced technology and expertise to deliver tailored solutions in automation, software, IoT, and industrial control. We are committed to being strategic partners in the digitalization and modernization of your business."
   bg_image: "/images/backgrounds/about-us-bg.png"
-  image: "/images/about/about-us.png"
+  image: "/images/about/ABOUT_US_AVR.jpg"
   button:
     enable: true
     label: "more service"
