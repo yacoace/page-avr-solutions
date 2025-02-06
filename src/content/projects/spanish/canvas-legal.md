@@ -2,7 +2,7 @@
 title: "DESARROLLO DE APLICACIÓN WEB PARA CONTROL DE OKR'S LEGALES"
 date: 2024-12-15T10:47:55+06:00
 description: "this is meta description"
-image: "/images/project/project-CANVAS-LEGAL-APP-4.png"
+image: "/images/project/project_CANVAS-LEGAL-APP-4.png"
 client: "SECTOR LEGAL"
 category: "APLICACIÓN WEB, MÓVIL O DE ESCRITORIO"
 status: "FINALIZADO"

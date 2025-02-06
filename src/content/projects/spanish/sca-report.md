@@ -2,14 +2,13 @@
 title: "SCA REPORT"
 date: 2024-02-07T10:47:55+06:00
 description: "this is meta description"
-image: "/images/project/project-SCA-REPORT-4.png"
-client: "SECTOR MINERO"
+image: "/images/project/project_SCA-REPORT-4.png"
+client: "-----"
 category: "APLICACIÓN WEB, MÓVIL O DE ESCRITORIO"
 status: "FINALIZADO"
 ---
 
-AVR Solutions desarrolló para Astay Systems una Aplicación Integrada en Power BI llamada SCA Report (Stability Capability Assessment Report). Esta solución fue diseñada para que gerentes y colaboradores puedan agregar, editar, auditar o aprobar comentarios en tiempo real directamente desde el informe de Power BI. Este dashboard mostraba datos clave sobre las operaciones internas de todo un proceso minero, como extracción de toneladas, acarreo y flota, permitiendo la toma de decisiones informadas sobre la estabilidad del rendimiento. La aplicación fue creada con Power Platform, lo que permitió integrarla perfectamente dentro del informe de Power BI, eliminando la necesidad de pantallas adicionales o vínculos externos. Esta solución se adaptó a 7 casos de uso específicos definidos por Astay Systems, garanti
-zando flexibilidad y funcionalidad personalizada para cada escenario.
+AVR Solutions desarrolló una Aplicación Integrada en Power BI llamada SCA Report (Stability Capability Assessment Report). Esta solución fue diseñada para que gerentes y colaboradores puedan agregar, editar, auditar o aprobar comentarios en tiempo real directamente desde el informe de Power BI. Este dashboard mostraba datos clave sobre las operaciones internas de todo un proceso minero, como extracción de toneladas, acarreo y flota, permitiendo la toma de decisiones informadas sobre la estabilidad del rendimiento. La aplicación fue creada con Power Platform, lo que permitió integrarla perfectamente dentro del informe de Power BI, eliminando la necesidad de pantallas adicionales o vínculos externos. Esta solución se adaptó a 7 casos de uso específicos, garantizando flexibilidad y funcionalidad personalizada para cada escenario.
 
 ### Beneficios del servicio
 
@@ -32,4 +31,4 @@ Para lograr el éxito del proyecto, AVR Solutions implementó las siguientes est
 
 ### Analiza tu negocio
 
-El proyecto resolvió una necesidad clave de Astay Systems: permitir la gestión centralizada de comentarios en tiempo real dentro de un informe de Power BI, eliminando procesos manuales y mejorando la capacidad de análisis y decisión. Al integrar datos operativos críticos de minería con una funcionalidad dinámica de comentarios, la aplicación ofreció una solución completa y personalizada que fortaleció la calidad del servicio ofrecido a su cliente minero.
+El proyecto resolvió una necesidad clave: permitir la gestión centralizada de comentarios en tiempo real dentro de un informe de Power BI, eliminando procesos manuales y mejorando la capacidad de análisis y decisión. Al integrar datos operativos críticos de minería con una funcionalidad dinámica de comentarios, la aplicación ofreció una solución completa y personalizada que fortaleció la calidad del servicio ofrecido a su cliente minero.
