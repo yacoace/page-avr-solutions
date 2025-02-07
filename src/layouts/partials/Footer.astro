@@ -18,10 +18,12 @@ if (menu) {
   footer = menu.footer;
 }
 
-const { copyright, address, phone, email, footer_content, copyright_menu } =
+const { copyright, address, phone, email, footer_content_default, footer_content, copyright_menu } =
   config.params;
 const { services, contact_info, follow_us_on, subscribe_newsletter } =
   await getTranslations(lang as keyof ContentEntryMap);
+
+const footer_cont = footer_content.find((f) => f.lang === lang) || { content: footer_content_default };
 ---
 
 <footer>
@@ -34,7 +36,7 @@ const { services, contact_info, follow_us_on, subscribe_newsletter } =
           <Logo src="/images/logo-alt.png" />
           <p
             class="text-light/75 mt-6 mb-5"
-            set:html={markdownify(footer_content)}
+            set:html={markdownify(footer_cont.content)}
           />
           <!-- social links -->
           <h4 class="text-white mb-6 mt-12 h5 font-semibold">{follow_us_on}</h4>
