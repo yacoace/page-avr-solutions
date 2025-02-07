@@ -4,7 +4,7 @@ date: 2024-10-30T10:47:55+06:00
 description: "this is meta description"
 image: "/images/project/project_RPA-LTH-5.png"
 client: "CONSORCIO CAROLINA"
-category: "DESARROLLO DE SOFTWARE"
+category: "AUTOMATIZACIÓN DE PROCESOS EMPRESARIALES"
 status: "FINALIZADO"
 ---
 

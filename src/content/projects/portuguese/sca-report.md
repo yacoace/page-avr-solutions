@@ -2,7 +2,7 @@
 title: "SCA REPORT"
 date: 2024-07-31T10:47:55+06:00
 description: "esta é uma meta descrição"
-image: "/images/project/project_SCA-REPOR-4.png"
+image: "/images/project/project_SCA-REPORT-4.png"
 client: "-----"
 category: "APLICAÇÃO WEB, MÓVEL OU DESKTOP"
 status: "FINALIZADO"
