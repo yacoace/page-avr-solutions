@@ -2,10 +2,10 @@
 title: "SCA REPORT"
 date: 2024-07-31T10:47:55+06:00
 description: "this is meta description"
-image: "/images/project/project-SCA-REPORT.png"
-client: "ASTAY SYSTEMS"
+image: "/images/project/project_SCA-REPORT-4.png"
+client: "-----"
 category: "Web, Mobile, or Desktop Application"
-status: "Completed"
+status: "COMPLETED"
 ---
 
 AVR Solutions developed an integrated Power BI Application called SCA Report (Stability Capability Assessment Report). This solution was designed to enable managers and collaborators to add, edit, audit, or approve comments in real-time directly from the Power BI report. This dashboard displayed key data about the internal operations of an entire mining process, such as tonnage extraction, hauling, and fleet management, allowing informed decisions on performance stability. The application was built using Power Platform, enabling seamless integration within the Power BI report, eliminating the need for additional screens or external links. This solution was tailored to 7 specific use cases, ensuring flexibility and customized functionality for each scenario.

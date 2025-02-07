@@ -11,18 +11,18 @@ philosophy_section:
     - title: "Nossa missão"
       content: "Digitalizar e otimizar os negócios por meio de tecnologias avançadas, melhorando a eficiência operacional e impulsionando o crescimento sustentável para nossos clientes."
       list:
-        - "Serviços de qualidade"
-        - "Satisfação do cliente"
+        - Compromisso com a Qualidade
+        - Resultados Sustentáveis
     - title: "NOSSA ABORDAGEM"
       content: "Escutamos, entendemos e projetamos soluções sob medida que integram inovação e praticidade, garantindo uma transformação digital eficaz para cada negócio."
       list:
-        - "Serviços de qualidade"
-        - "Satisfação do cliente"
+        - Atenção Personalizada
+        - Soluções Inovadoras
     - title: "NOSSA FILOSOFIA"
       content: "Acreditamos na tecnologia como uma ferramenta para o progresso. Com paixão, ética e dedicação, buscamos criar um impacto positivo em cada projeto."
       list:
-        - "Serviços de qualidade"
-        - "Satisfação do cliente"
+        - Paixão pela Tecnologia
+        - Ética Profissional
 
 about_section:
   enable: true

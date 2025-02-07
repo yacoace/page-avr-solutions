@@ -4,7 +4,7 @@ date: 2024-12-15T10:47:55+06:00
 description: "esta é uma meta descrição"
 image: "/images/project/project_CANVAS-LEGAL-APP-4.png"
 client: "CANVAS LEGAL"
-category: "SETOR JURÍDICO"
+category: "APLICAÇÃO WEB, MÓVEL OU DESKTOP"
 status: "FINALIZADO"
 ---
 
