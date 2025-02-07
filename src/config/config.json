@@ -1,14 +1,14 @@
 {
   "site": {
     "title": "AVR-Solutions",
-    "base_url": "https://bexer-astro.onrender.com",
+    "base_url": "https://avrsolutions.dev",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/scara.svg",
     "logo": "/images/logo.png",
     "logo_width": "150",
     "logo_height": "42",
-    "logo_text": "Bexer"
+    "logo_text": "AVR"
   },
 
   "settings": {
@@ -29,8 +29,13 @@
     "address": "Av. Máximo Abril 537, Jesús María 15072",
     "phone": "+51 991 544 309",
     "email": "admin@avrdev.onmicrosoft.com",
-    "footer_content": "At AVR, we transform ideas into innovative technological solutions. We specialize in business process automation, custom software development, IoT solutions, and industrial automation, tailoring our services to each client’s unique needs. Our team of experts is committed to excellence, delivering scalable and reliable solutions that boost productivity and reduce costs.",
     "copyright": "&copy; Designed And Developed by AVR SOLUTIONS SAC",
+    "footer_content_default" : "At AVR, we transform ideas into innovative technological solutions. We specialize in business process automation, custom software development, IoT solutions, and industrial automation, tailoring our services to each client’s unique needs. Our team of experts is committed to excellence, delivering scalable and reliable solutions that boost productivity and reduce costs.",
+    "footer_content": [
+      { "lang": "en" , "content" : "At AVR, we transform ideas into innovative technological solutions. We specialize in business process automation, custom software development, IoT solutions, and industrial automation, tailoring our services to each client’s unique needs. Our team of experts is committed to excellence, delivering scalable and reliable solutions that boost productivity and reduce costs."},
+      { "lang": "es" , "content" : "En AVR transformamos ideas en soluciones tecnológicas innovadoras. Estamos especializados en automatización de procesos de negocio, desarrollo de software a medida, soluciones IoT y automatización industrial, adaptando nuestros servicios a las necesidades únicas de cada cliente. Nuestro equipo de expertos está comprometido con la excelencia, ofreciendo soluciones escalables y fiables que impulsan la productividad y reducen los costes."},
+      { "lang": "pr" , "content" : "Na AVR, transformamos ideias em soluções tecnológicas inovadoras. Somos especializados em automação de processos de negócios, desenvolvimento de software personalizado, soluções de IoT e automação industrial, adaptando nossos serviços às necessidades exclusivas de cada cliente. Nossa equipe de especialistas está comprometida com a excelência, oferecendo soluções escaláveis e confiáveis que aumentam a produtividade e reduzem os custos."}
+    ],
     "copyright_menu": {
       "enable": true,
       "menu_items": [
@@ -48,13 +53,13 @@
 
   "disqus": {
     "enable": true,
-    "shortname": "themefisher-template",
+    "shortname": "avrtheme-template",
     "settings": {}
   },
 
   "metadata": {
-    "meta_author": "themefisher",
+    "meta_author": "AVR-solutions",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Bexer is a SAAS theme powered by Astro"
+    "meta_description": "AVR theme is a SAAS theme powered by Astro"
   }
 }
