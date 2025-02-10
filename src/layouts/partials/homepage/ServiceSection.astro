@@ -12,12 +12,13 @@ const { serviceIndex, services } = Astro.props;
         <div class="col-12 text-center">
           <div class="section-title">
             <span class="section-title-border border-center"></span>
+
             <p
               class="h5"
               set:html={markdownify(serviceIndex?.data?.subtitle)}
             />
             <h2
-              class="h1 text-white"
+              class="h1 text-white" 
               set:html={markdownify(serviceIndex?.data?.title)}
             />
           </div>
