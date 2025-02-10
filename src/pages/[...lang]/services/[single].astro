@@ -46,9 +46,12 @@ const allServices = await getSinglePage(
   land as keyof ContentEntryMap,
 );
 
-const serviceSlugs = allServices.map((service) => {
+const serviceData = allServices.map((service) => {
   const parts = service.slug.split("/");
-  return parts[1];
+  return {
+    slug: parts[1],
+    title: service.data.title
+  };
 });
 
 const {
@@ -81,17 +84,17 @@ const {
             <h5 class="mb-5">{our_services}</h5>
             <ul class="list-styled style-circle space-y-4">
               {
-                serviceSlugs.map((slug: string) => (
+                serviceData.map((serviceItem) => (
                   <li class="border-b border-border pb-4">
                     <a
-                      href={`/services/${slug}`}
+                      href={`/services/${serviceItem.slug}`}
                       class={
-                        service.slug.split("/")[1] === `${slug}`
+                        service.slug.split("/")[1] === serviceItem.slug
                           ? "text-primary"
                           : "text-text" + "block no-underline"
                       }
                     >
-                      {titleify(slug)}
+                      {serviceItem.title}
                     </a>
                   </li>
                 ))
