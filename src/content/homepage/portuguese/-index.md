@@ -37,7 +37,7 @@ hero_slider:
     - subtitle: "Integre tecnologia avançada aos seus processos industriais."
       title: "Automação Industrial"
       content: "Programamos PLCs para otimizar seus processos, desenvolvemos sistemas SCADA para supervisão em tempo real e oferecemos soluções avançadas de controle de processos."
-      bg_image: "/images/slider/AUT_IND_AVR.jpg"
+      bg_image: "/images/slider/AUT_IND_AVR.png"
       button:
         enable: true
         label: "mais detalhes"

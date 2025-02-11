@@ -37,7 +37,7 @@ hero_slider:
     - subtitle: "Integrate advanced technology into your industrial processes"
       title: "Industrial Automation"
       content: "We program PLCs to optimize your processes, develop SCADA systems for real-time monitoring and offer advanced process control solutions."
-      bg_image: "/images/slider/AUT_IND_AVR.jpg"
+      bg_image: "/images/slider/AUT_IND_AVR.png"
       button:
         enable: true
         label: "more details"
