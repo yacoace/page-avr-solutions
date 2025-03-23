@@ -20,6 +20,7 @@ export async function getStaticPaths() {
       const services = await getSinglePage(
         "services",
         lang as keyof ContentEntryMap,
+        "custom-software"
       );
 
       return services.map((service) => ({
@@ -44,12 +45,14 @@ const land = getLangFromUrl(Astro.url);
 const allServices = await getSinglePage(
   "services",
   land as keyof ContentEntryMap,
+  "custom-software"
 );
 
 const serviceData = allServices.map((service) => {
   const parts = service.slug.split("/");
   return {
-    slug: parts[1],
+    slug1: parts[1],
+    slug2: parts[2],
     title: service.data.title
   };
 });
@@ -87,9 +90,9 @@ const {
                 serviceData.map((serviceItem) => (
                   <li class="border-b border-border pb-4">
                     <a
-                      href={`/services/${serviceItem.slug}`}
+                      href={`/services/${serviceItem.slug1}/${serviceItem.slug2}`}
                       class={
-                        service.slug.split("/")[1] === serviceItem.slug
+                        service.slug.split("/")[2] === serviceItem.slug2
                           ? "text-primary"
                           : "text-text" + "block no-underline"
                       }

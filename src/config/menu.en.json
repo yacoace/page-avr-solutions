@@ -2,7 +2,16 @@
   "main": [
     { "name": "Home", "url": "/" },
     { "name": "About", "url": "/about" },
-    { "name": "Services", "url": "/services" },
+    { "name": "Services", 
+      "url": "" ,
+      "hasChildren": true,
+      "children": [
+        { "name": "Business Automation", "url": "/services/business-automation" },
+        { "name": "Custom Software", "url": "/services/custom-software" },
+        { "name": "IoT", "url": "/services/iot" },
+        { "name": "Industrial Automation", "url": "/services/industrial-automation" }
+      ]
+    },
     { "name": "Team", "url": "/team" },
     { "name": "Contact", "url": "/contact" },
     { "name": "Projects", "url": "/projects" }

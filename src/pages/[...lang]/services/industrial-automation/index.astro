@@ -17,10 +17,11 @@ const lang = getLangFromUrl(Astro.url);
 
 const serviceIndex = await getListPage(
   "services",
-  lang as keyof ContentEntryMap
+  lang as keyof ContentEntryMap,
+  "industrial-automation"
 );
 
-const services = await getSinglePage("services", lang as keyof ContentEntryMap);
+const services = await getSinglePage("services", lang as keyof ContentEntryMap, "industrial-automation");
 ---
 
 <Base {...serviceIndex[0].data}>

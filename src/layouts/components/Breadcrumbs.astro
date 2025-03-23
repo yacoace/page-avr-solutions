@@ -44,7 +44,9 @@ paths.forEach((label: string, i: number) => {
       parts.map(({ label, ...attrs }, index) => (
         <li class="mx-1 capitalize" role="listitem">
           {index > 0 && <span class="inline-block mr-1">/</span>}
-          {index !== parts.length - 1 ? (
+          { label === "Services" ? (
+            <span class="text-light">{label}</span>
+          ) : index !== parts.length - 1 ? (
             <a class="text-primary " {...attrs}>
               {label}
             </a>

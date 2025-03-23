@@ -2,7 +2,16 @@
   "main": [
     { "name": "Inicio", "url": "/" },
     { "name": "Acerca de", "url": "/about" },
-    { "name": "Servicios", "url": "/services" },
+    { "name": "Servicios", 
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        { "name": "Automatización Empresarial", "url": "/services/business-automation" },
+        { "name": "Software a Medida", "url": "/services/custom-software" },
+        { "name": "IoT", "url": "/services/iot" },
+        { "name": "Automatización Industrial", "url": "/services/industrial-automation" }
+      ]
+    },
     { "name": "Equipo", "url": "/team" },
     { "name": "Contacto", "url": "/contact" },
     { "name": "Proyectos", "url": "/projects" }
