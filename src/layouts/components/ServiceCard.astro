@@ -12,6 +12,14 @@ import type { ContentEntryMap } from "astro:content";
 const { services } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 
+const categories = [
+  ...new Set(
+    services.map((service: Service) =>
+      service.data.category?.toLowerCase()
+    )
+  ),
+];
+
 const { read_more } = await getTranslations(lang as keyof ContentEntryMap);
 
 type Service = {
@@ -21,13 +29,39 @@ type Service = {
     description: string;
     icon: string;
     image: string;
+    category: string;
   };
   body: string;
 };
 ---
 
 <div class="container">
-  <div class="row g-4">
+  <!-- Filtro de categorías -->
+  <ul class="flex justify-center items-center flex-wrap mb-7 shuffle-filter">
+    <li class="selected" data-target="all">
+      <button
+        type="button"
+        class="m-3 inline-block text-dark py-3 font-secondary uppercase font-medium text-lg"
+      >
+        All
+      </button>
+    </li>
+    {
+      categories.map((category) => (
+        <li data-target={category}>
+          <button
+            type="button"
+            class="m-3 inline-block text-dark py-3 font-secondary uppercase font-medium text-lg"
+          >
+            {category}
+          </button>
+        </li>
+      ))
+    }
+  </ul>
+
+  <!-- Servicios filtrables -->
+  <ul class="row g-4 shuffle-container">
     {
       services?.map((service: Service) => {
         const slugParts = service.slug.split("/");
@@ -36,7 +70,10 @@ type Service = {
         service.slug = modifiedSlug;
 
         return (
-          <div class="lg:col-4 sm:col-6 mb-4 lg:mb-0">
+          <li
+            class="lg:col-4 sm:col-6 mb-4"
+            data-groups={`["${service.data.category.toLowerCase()}","all"]`}
+          >
             <div class="box-shadow">
               <ImageMod
                 src={service.data.image}
@@ -75,9 +112,43 @@ type Service = {
                 </div>
               </div>
             </div>
-          </div>
+          </li>
         );
       })
     }
-  </div>
+  </ul>
 </div>
+
+<script>
+  import Shuffle from "shufflejs";
+
+  document.addEventListener("astro:page-load", () => {
+    let element = document.querySelector(".shuffle-container") as HTMLElement;
+
+    let shuffleInstance = new Shuffle(element, {
+      itemSelector: "li",
+    });
+
+    // Apply the default filter to show all items
+    shuffleInstance.filter("all");
+
+    const filter = document.querySelector(".shuffle-filter");
+    const filtterLists = Array.from(filter?.children || []);
+    filtterLists.forEach((list) => {
+      const button = list.querySelector("button");
+      if (list.classList.contains("selected")) {
+        button?.classList.add("text-primary");
+      }
+      button?.addEventListener("click", function () {
+        filtterLists.forEach((list) => {
+          list.classList.remove("selected");
+          list.querySelector("button")?.classList.remove("text-primary");
+        });
+        this.parentElement?.classList.add("selected");
+        this.classList.add("text-primary");
+        const keyword = list.getAttribute("data-target");
+        shuffleInstance.filter(keyword!);
+      });
+    });
+  });
+</script>
